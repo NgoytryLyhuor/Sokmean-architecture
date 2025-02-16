@@ -10,11 +10,11 @@
 <nav class="site-nav">
     <div class="container">
         <div class="site-navigation">
-            <a href="{{ route('index') }}" class="logo m-0 float-start">Archiark<span class="text-primary">.</span> </a>
+            <a href="{{ route('index') }}" class="logo m-0 float-start">Norkor Architecture<span class="text-primary">.</span> </a>
 
             <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
                 <li class="active"><a href="{{ route('index') }}">Home</a></li>
-                <li class="has-children">
+                {{-- <li class="has-children">
                     <a href="projects.html">Projects</a>
                     <ul class="dropdown">
                         <li><a href="#">Commercial Building</a></li>
@@ -28,7 +28,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li><a href="{{ route('services') }}">Services</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>

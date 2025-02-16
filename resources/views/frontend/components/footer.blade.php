@@ -5,7 +5,11 @@
             <div class="col-lg-4">
                 <div class="widget">
                     <h3 class="line-top">About</h3>
-                    <p class="mb-5">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio dicta placeat! Et pariatur doloremque ea veniam. Separated they live.</p>
+                    <p class="mb-5">At <b>Norkor Architecture.</b> we are passionate about creating exceptional architectural
+                        designs that inspire and transform the spaces where people live, work, and play. With a
+                        commitment to innovation, creativity, and sustainability, our team of skilled architects,
+                        designers, and planners work collaboratively with clients to bring their visions to life.
+                    </p>
 
                 </div>
                 <div class="widget">
@@ -65,7 +69,13 @@
 
         <div class="row justify-content-center text-center copyright">
             <div class="col-md-8">
-                <p class="small text-black-50">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a></br>Distributed By <a href="https://themewagon.com/">Themewagon</a> <!-- License information: https://untree.co/license/ -->
+                <p class="small text-black-50">Copyright &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>. All Rights Reserved. &mdash; Designed with love by <a
+                        href="https://untree.co">Untree.co</a></br>Distributed By <a
+                        href="https://themewagon.com/">Themewagon</a>
+                    <!-- License information: https://untree.co/license/ -->
                 </p>
             </div>
         </div>

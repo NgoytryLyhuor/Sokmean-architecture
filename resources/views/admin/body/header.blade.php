@@ -19,8 +19,13 @@
                     <span class="logo-lg">
                         <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="logo-light" height="20">
                     </span>
+
                 </a>
+
             </div>
+            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
+                <i class="ri-menu-2-line align-middle"></i>
+            </button>
         </div>
 
         @php
@@ -48,7 +53,12 @@
                     <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
                     <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="{{ route('logout') }}"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
+                    <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                        @csrf
+                        <button type="submit" class="dropdown-item text-danger" style="background: none; border: none; cursor: pointer;">
+                            <i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

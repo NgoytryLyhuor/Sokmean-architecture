@@ -23,4 +23,8 @@ class FrontendController extends Controller
         return view('frontend.contact');
     }
 
+    public function project_details(){
+        return view('frontend.project_details');
+    }
+
 }

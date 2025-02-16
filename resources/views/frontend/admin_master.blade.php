@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="{{ asset('frontend/css/aos.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/css/glightbox.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('global.css') }}" id="app-style" type="text/css" />
 
 	<title>Archiark</title>
 </head>

@@ -16,6 +16,7 @@
         <link href="{{ asset('backend/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="{{ asset('backend/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('global.css') }}" id="app-style" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -27,9 +28,9 @@
                     <div class="card-body">
 
                         <div class="text-center mt-4">
-                            <div class="mb-3">
-                                <a href="index.html" class="auth-logo">
-                                    <img src="{{ asset('backend/assets/images/logo-dark.png') }}" height="30" class="logo-dark mx-auto" alt="">
+                            <div class="mb-1">
+                                <a href="{{ route('login') }}" class="auth-logo">
+                                    <span class="api-logo">Norkor Architecture<span class="text-primary">.</span></span>
                                 </a>
                             </div>
                         </div>
