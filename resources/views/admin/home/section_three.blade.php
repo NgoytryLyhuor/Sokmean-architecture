@@ -131,6 +131,7 @@
                             setTimeout(function() {
                                 $('#success-alert').fadeOut();
                             }, 2000);
+                            $('html, body').animate({ scrollTop: 0 }, 'slow');
 
                         } else {
                             alert('An error occurred. Please try again.');
