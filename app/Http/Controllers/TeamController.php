@@ -113,12 +113,27 @@ class TeamController extends Controller
      */
     public function destroy($id)
     {
+        // Find the team record
         $team = Team::findOrFail($id);
+
+        // Check if the team has an associated image
+        if ($team->image) {
+            // Define the full path to the image
+            $imagePath = public_path('backend/assets/images/team/' . $team->image);
+
+            // Delete the image file if it exists
+            if (file_exists($imagePath)) {
+                unlink($imagePath); // Use PHP's unlink() to delete the file
+            }
+        }
+
+        // Delete the team record from the database
         $team->delete();
 
         // Add a success message to the session
         session()->flash('success', 'Team deleted successfully');
 
+        // Return a JSON response
         return response()->json(['message' => 'Team deleted successfully']);
     }
 }
