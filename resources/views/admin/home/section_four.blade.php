@@ -38,6 +38,29 @@
                                 </div>
                             @endif
 
+                            @if ($errors->any())
+                                @foreach ($errors->all() as $error)
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="danger-alert">
+                                        <i class="mdi mdi-block-helper me-2"></i>
+                                        {{ $error }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                @endforeach
+                            @endif
+
+
+
+                            <!-- Success & Error Messages -->
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" id="success-alert" style="display: none;">
+                                <i class="mdi mdi-check-all me-2"></i>
+                                <span id="success-message"></span>
+                            </div>
+
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="danger-alert" style="display: none;">
+                                <i class="mdi mdi-alert-outline me-2"></i>
+                                <span id="danger-message"></span>
+                            </div>
+
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
@@ -59,32 +82,33 @@
                                 <div class="tab-pane" id="description" role="tabpanel">
                                     <div class="row mt-3">
                                         <div class="col-12">
-                                            <form action="{{ route('homepages.section_four_update') }}" method="post" enctype="multipart/form-data">
+                                            <form id="updateSectionFourForm" enctype="multipart/form-data">
                                                 @csrf
 
                                                 <div class="row mb-3">
                                                     <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="title" value="{{ $data->title }}">
+                                                        <input class="form-control" type="text" name="title" value="{{ $data->title }}" required>
                                                     </div>
                                                 </div>
 
                                                 <div class="row mb-3">
                                                     <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
                                                     <div class="col-sm-10">
-                                                        <textarea class="form-control" name="banner_title" id="" cols="30" rows="4">{{ $data->banner_title }}</textarea>
+                                                        <textarea class="form-control" name="banner_title" cols="30" rows="4" required>{{ $data->banner_title }}</textarea>
                                                     </div>
                                                 </div>
 
                                                 <div class="row mb-3">
                                                     <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                                     <div class="col-sm-10">
-                                                        <button type="submit" class="btn btn-primary waves-effect waves-light api-width">
+                                                        <button type="submit" id="updateSectionFourBtn" class="btn btn-primary waves-effect waves-light api-width">
                                                             Update <i class="ri-arrow-right-line align-middle ms-2"></i>
                                                         </button>
                                                     </div>
                                                 </div>
                                             </form>
+
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +192,7 @@
                                                 </div>
 
                                                 <div class="row mb-3">
-                                                    <label for="example-text-input" class="col-sm-2 col-form-label">Image</label>
+                                                    <label for="example-text-input" class="col-sm-2 col-form-label">Banner</label>
                                                     <div class="col-sm-10">
                                                         <input class="form-control" type="file" name="banner" id="banner">
                                                     </div>
@@ -217,7 +241,7 @@
                                                 </div>
 
                                                 <div class="row mb-3">
-                                                    <label for="example-text-input" class="col-sm-2 col-form-label">Image</label>
+                                                    <label for="example-text-input" class="col-sm-2 col-form-label">Banner</label>
                                                     <div class="col-sm-10">
                                                         <input class="form-control" type="file" name="banner" id="edit_banner">
                                                     </div>
@@ -333,6 +357,43 @@
                     },
                     error: function(xhr) {
                         alert('An error occurred while deleting. Please try again.');
+                    }
+                });
+            });
+
+            $('#updateSectionFourForm').on('submit', function(e) {
+                e.preventDefault(); // Prevent default form submission
+
+                let formData = new FormData(this);
+                let submitBtn = $('#updateSectionFourBtn');
+
+                submitBtn.prop('disabled', true).text('Updating...');
+
+                $.ajax({
+                    url: "{{ route('homepages.section_four_update') }}", // Make sure the route matches
+                    type: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            $('#success-message').text(response.message);
+                            $('#success-alert').hide().fadeIn().delay(2000).fadeOut();
+                        } else {
+                            $('#danger-message').text(response.message);
+                            $('#danger-alert').hide().fadeIn().delay(2000).fadeOut();
+                        }
+                    },
+                    error: function(xhr) {
+                        let errorMessage = "An error occurred. Please try again.";
+                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                            errorMessage = xhr.responseJSON.message;
+                        }
+                        $('#danger-message').text(errorMessage);
+                        $('#danger-alert').hide().fadeIn().delay(2000).fadeOut();
+                    },
+                    complete: function() {
+                        submitBtn.prop('disabled', false).text('Update');
                     }
                 });
             });

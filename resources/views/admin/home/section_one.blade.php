@@ -32,7 +32,13 @@
                             <!-- Success Message -->
                             <div class="alert alert-success alert-dismissible fade show" role="alert" id="success-alert" style="display: none;">
                                 <i class="mdi mdi-check-all me-2"></i>
-                                <span id="flash-message"></span>
+                                <span id="success-message"></span>
+                            </div>
+
+                            <!-- Danger Message -->
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="danger-alert" style="display: none;">
+                                <i class="mdi mdi-check-all me-2"></i>
+                                <span id="danger-message"></span>
                             </div>
 
                             <form id="updateForm" enctype="multipart/form-data">
@@ -46,7 +52,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label">Video URL</label>
+                                    <label class="col-sm-2 col-form-label">Video</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="file" name="video_url" id="video_url">
                                         <input type="hidden" name="old_video_url" value="{{ $data->video_url }}">
@@ -55,7 +61,7 @@
 
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label"></label>
-                                    <video id="show_video" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important; height:160px !important;" controls muted autoplay>
+                                    <video id="show_video" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important; height:160px !important;" controls muted>
                                         <source src="{{ asset('backend/assets/images/homePage/' . $data->video_url) }}" type="video/mp4">
                                     </video>
                                 </div>
@@ -63,7 +69,7 @@
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label">Banner Title</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" name="banner_title" cols="30" rows="4">{{ $data->banner_title }}</textarea>
+                                        <textarea class="form-control" name="banner_title" cols="30" rows="8">{{ $data->banner_title }}</textarea>
                                     </div>
                                 </div>
 
@@ -104,38 +110,44 @@
         $(document).ready(function() {
             // Handle Form Submission
             $('#updateForm').on('submit', function(e) {
-            e.preventDefault();
+                e.preventDefault();
 
-            let formData = new FormData(this);
+                let formData = new FormData(this);
 
-            $.ajax({
-                url: "{{ route('homepages.section_one_update') }}",
-                type: "POST",
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(response) {
-                    if (response.status === 'success') {
-                        // Set success message text
-                        $('#flash-message').text(response.message);
+                $.ajax({
+                    url: "{{ route('homepages.section_one_update') }}",
+                    type: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            // Set success message text
+                            $('#success-message').text(response.message);
 
-                        // Show the alert and fade out after 3 seconds
-                        $('#success-alert').removeClass('fade').show();
-                        $('#success-alert').addClass('fade');
-                        setTimeout(function() {
-                            $('#success-alert').fadeOut();
-                        }, 2000);
+                            // Show the alert and fade out after 2 seconds
+                            $('#success-alert').hide().fadeIn().delay(5000).fadeOut();
+
+                            $('html, body').animate({ scrollTop: 0 }, 'slow');
+                        } else {
+                            // Handle error response
+                            $('#danger-message').text(response.message);
+                            $('#danger-alert').hide().fadeIn().delay(5000).fadeOut();
+                        }
+                    },
+                    error: function(xhr) {
+                        let errorMessage = "An error occurred. Please try again.";
+
+                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                            errorMessage = xhr.responseJSON.message;
+                        }
+
+                        $('#danger-message').text(errorMessage);
+                        $('#danger-alert').hide().fadeIn().delay(5000).fadeOut();
                         $('html, body').animate({ scrollTop: 0 }, 'slow');
-                    } else {
-                        alert(response.message);
                     }
-                },
-                error: function(xhr) {
-                    alert(xhr.responseJSON.message);
-                }
+                });
             });
-        });
-
 
             // Preview Banner Image Before Upload
             $("#banner").change(function() {

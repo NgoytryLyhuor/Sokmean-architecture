@@ -19,7 +19,7 @@ class HomePageController extends Controller
         $request->validate([
             'title' => 'required|string',
             'banner_title' => 'required|string',
-            'banner' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'banner' => 'nullable|image|mimes:jpeg,png,jpg|max:50000',
             'video_url' => 'nullable|mimes:mp4,mov,avi,wmv|max:100000', // Max size in kilobytes (100MB)
         ]);
 
@@ -95,7 +95,7 @@ class HomePageController extends Controller
         $request->validate([
             'title' => 'required|string',
             'banner_title' => 'required|string',
-            'banner' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'banner' => 'nullable|image|mimes:jpeg,png,jpg|max:10000',
         ]);
 
         $homePage = HomePage::findOrFail(2);
@@ -151,7 +151,7 @@ class HomePageController extends Controller
         $request->validate([
             'title' => 'required|string',
             'banner_title' => 'required|string',
-            'banner' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'banner' => 'nullable|image|mimes:jpeg,png,jpg|max:50000',
         ]);
 
         $homePage = HomePage::findOrFail(3);
@@ -196,7 +196,7 @@ class HomePageController extends Controller
     public function section_four()
     {
         $data = HomePage::findOrFail(4);
-        $drop_down_data = HomePage::whereNotIn('id', [1, 2, 3, 4])->get();
+        $drop_down_data = HomePage::whereNotIn('id', [1, 2, 3, 4])->orderBy('id','desc')->get();
 
         return view('admin.home.section_four', compact('data', 'drop_down_data'));
     }
@@ -211,24 +211,24 @@ class HomePageController extends Controller
 
         $homePage = HomePage::findOrFail(4);
 
-        // Update other fields
+        // Update fields
         $homePage->title = $request->title;
         $homePage->banner_title = $request->banner_title;
         $homePage->save();
 
-        // Flash success message
-        session()->flash('success', 'Updated successfully!');
-
-        // Redirect back to the previous page
-        return redirect()->back();
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Updated successfully!'
+        ]);
     }
+
 
     public function section_four_drop_down_insert(Request $request)
     {
         $request->validate([
             'title' => 'required|string',
             'banner_title' => 'required|string',
-            'banner' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'banner' => 'nullable|image|mimes:jpeg,png,jpg|max:50000',
         ]);
 
         $homePage = new HomePage(); // Create a new instance
@@ -267,7 +267,7 @@ class HomePageController extends Controller
         $request->validate([
             'title' => 'required|string',
             'banner_title' => 'required|string',
-            'banner' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',  // Banner is optional
+            'banner' => 'nullable|image|mimes:jpeg,png,jpg|max:50000',
         ]);
 
         // Find the HomePage record

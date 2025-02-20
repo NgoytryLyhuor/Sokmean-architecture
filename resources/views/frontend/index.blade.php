@@ -1,21 +1,31 @@
 @extends('frontend.admin_master')
 @section('frontend')
 
-<div class="hero-2 overlay" style="background-image: url('{{ asset('frontend/images/img_2.jpg') }}');">
+@php
+    $section_one    = App\Models\HomePage::where('id',1)->first();
+    $section_two    = App\Models\HomePage::where('id',2)->first();
+    $section_three  = App\Models\HomePage::where('id',3)->first();
+    $section_four   = App\Models\HomePage::where('id',4)->first();
+    $section_four_items   = App\Models\HomePage::whereNotIn('id', [1, 2, 3, 4])->get();
+    $number = 1;
+@endphp
+
+<div class="hero-2 overlay" style="background-image: url('{{ asset('backend/assets/images/homePage/'.$section_one->banner) }}');">
+
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 mx-auto">
-                <h1 class="mb-5"><span>We love</span> <span class="d-block">architecture</span> <span class="d-block">& interior design</span></h1>
+                <h1 class="mb-5">{{ $section_one->title }}</h1>
 
                 <div class="play-vid">
-                    <a href="https://www.youtube.com/watch?v=mwtbEGNABWU" class="play glightbox">
+                    <a href="http://127.0.0.1:8000/backend/assets/images/homePage/{{ $section_one->video_url }}" class="play glightbox">
                         <span class="icon-play"></span>
                     </a>
                 </div>
 
                 <div class="intro-desc">
                     <div class="line"></div>
-                    <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p>
+                    <p>{{ $section_one->banner_title }}</p>
                 </div>
             </div>
         </div>
@@ -27,14 +37,12 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-lg-3">
-                <h2 class="heading">We create architectural designs</h2>
-                <p>
-                    At <b>Norkor Architecture.</b> we bring visions to life through innovative and functional architectural designs. Our team of skilled architects and designers blend creativity with precision to craft spaces that are not only aesthetically stunning but also practical and sustainable. Whether it's residential, commercial, or urban planning, we focus on delivering designs that reflect your unique vision while harmonizing with the environment.
-                </p>
+                <h2 class="heading">{{ $section_two->title }}</h2>
+                <p>{{ $section_two->banner_title }}</p>
                 <p><a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a></p>
             </div>
             <div class="col-lg-7 ms-auto">
-                <img src="{{ asset('frontend/images/img_8.jpg') }}" alt="Image" class="img-fluid img-r">
+                <img src="{{ asset('backend/assets/images/homePage/'.$section_two->banner) }}" alt="Image" class="img-fluid img-r">
             </div>
         </div>
     </div>
@@ -44,11 +52,11 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="{{ asset('frontend/images/img_4.jpg') }}" alt="IMage" class="img-fluid">
+                <img src="{{ asset('backend/assets/images/homePage/'.$section_three->banner) }}" alt="IMage" class="img-fluid">
             </div>
             <div class="col-lg-3 ms-auto">
-                <h2 class="heading">Modern Architecture</h2>
-                <p>Modern architecture is more than just a design style—it’s a philosophy that embraces simplicity, functionality, and innovation. At <b>Norkor Architecture.</b> we specialize in creating contemporary structures that seamlessly blend form and function. Our designs prioritize clean lines, open spaces, and the use of cutting-edge materials to craft buildings that are not only visually striking but also sustainable and efficient.</p>
+                <h2 class="heading">{{ $section_three->title }}</h2>
+                <p>{{ $section_three->banner_title }}</p>
                 <p><a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a></p>
             </div>
         </div>
@@ -59,94 +67,48 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <h2 class="heading">Services</h2>
-                <p>At <b>Norkor Architecture.</b> we offer a comprehensive range of architectural services designed to transform ideas into reality. Our expertise spans from conceptual design to project completion, ensuring that every structure we create is both functional and visually captivating. Whether it’s a residential home, a commercial space, or an urban development, we take a client-centered approach to deliver designs that reflect unique visions while integrating modern innovation.</p>
+                <h2 class="heading">{{ $section_four->title }}</h2>
+                <p>{{ $section_four->banner_title }}</p>
             </div>
 
             <div class="col-lg-6 ms-auto">
                 <div class="accordion accordion-flush accordion-1" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-                                Interior Design
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <div class="row justify-content-between">
-                                    <div class="col-md-4">
-                                        <img src="{{ asset('frontend/images/img_7.jpg') }}" alt="Image" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <p>At <b>Norkor Architecture.</b> our interior design services focus on crafting spaces that are both functional and visually stunning. We believe that great design goes beyond aesthetics—it’s about creating environments that enhance the way people live, work, and interact. Whether designing a cozy home, a dynamic office, or a luxurious commercial space, we tailor each project to meet the unique needs and desires of our clients.</p>
-                                        <a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                Landscape Design
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <div class="row justify-content-between">
-                                    <div class="col-md-4">
-                                        <img src="{{ asset('frontend/images/img_2.jpg') }}" alt="Image" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio.</p>
-                                        <a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                Engineering Plan
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <div class="row justify-content-between">
-                                    <div class="col-md-4">
-                                        <img src="{{ asset('frontend/images/img_3.jpg') }}" alt="Image" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio.</p>
-                                        <a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+                    @foreach($section_four_items as $data)
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne-{{ $number }}">
+                                <button class="accordion-button {{ $number > 1 ? 'collapsed' : '' }}"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne-{{ $number }}"
+                                    aria-expanded="{{ $number == 1 ? 'true' : 'false' }}"
+                                    aria-controls="flush-collapseOne-{{ $number }}">
+                                    {{ $data->title }}
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne-{{ $number }}"
+                                class="accordion-collapse collapse {{ $number == 1 ? 'show' : '' }}"
+                                aria-labelledby="flush-headingOne-{{ $number }}"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col-md-4">
+                                            <img src="{{ asset('backend/assets/images/homePage/' . $data->banner) }}" alt="Image" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>{{ $data->banner_title }}</p>
+                                            <a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                Architecture Design
-                            </button>
-                        </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <div class="row justify-content-between">
-                                    <div class="col-md-4">
-                                        <img src="{{ asset('frontend/images/img_4.jpg') }}" alt="Image" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio.</p>
-                                        <a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        @php
+                            $number++; // Increment the counter
+                        @endphp
+                    @endforeach
+
 
                 </div>
             </div>

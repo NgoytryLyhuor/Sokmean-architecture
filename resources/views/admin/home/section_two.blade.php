@@ -36,6 +36,12 @@
                                 <span id="flash-message"></span>
                             </div>
 
+                            <!-- Danger Message -->
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="danger-alert" style="display: none;">
+                                <i class="mdi mdi-check-all me-2"></i>
+                                <span id="danger-message"></span>
+                            </div>
+
 
 
                             <form id="updateForm" enctype="multipart/form-data">
@@ -51,7 +57,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" name="banner_title" id="" cols="30" rows="4">{{ $data->banner_title }}</textarea>
+                                        <textarea class="form-control" name="banner_title" id="" cols="30" rows="8">{{ $data->banner_title }}</textarea>
                                     </div>
                                 </div>
 
@@ -147,8 +153,15 @@
                         }
                     },
                     error: function(xhr) {
-                        // Handle AJAX errors
-                        alert('An error occurred. Please try again.');
+                        let errorMessage = "An error occurred. Please try again.";
+
+                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                            errorMessage = xhr.responseJSON.message;
+                        }
+
+                        $('#danger-message').text(errorMessage);
+                        $('#danger-alert').hide().fadeIn().delay(5000).fadeOut();
+                        $('html, body').animate({ scrollTop: 0 }, 'slow');
                     }
                 });
             });

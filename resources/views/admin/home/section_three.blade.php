@@ -49,7 +49,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" name="banner_title" cols="30" rows="4">{{ $data->banner_title }}</textarea>
+                                        <textarea class="form-control" name="banner_title" cols="30" rows="8">{{ $data->banner_title }}</textarea>
                                     </div>
                                 </div>
 

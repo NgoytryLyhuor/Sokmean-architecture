@@ -4,6 +4,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\TeamController;
 
 Route::get('/dashboard', function () {
     return view('admin.index');
@@ -43,6 +44,17 @@ Route::controller(HomePageController::class)->group(function(){
     Route::post('/homepages/section_four_drop_down_update','section_four_drop_down_update')->name('homepages.section_four_drop_down_update');
     Route::delete('/homepages/section_four_drop_down_delete','section_four_drop_down_delete')->name('homepages.section_four_drop_down_delete');
 
+});
+
+
+
+// backend Team page
+Route::controller(TeamController::class)->group(function () {
+    Route::get('/team-pages', 'index')->name('team-pages.index');
+    Route::post('/team-pages/insert', 'store')->name('team-pages.store');
+    Route::get('/team-pages/edit', 'edit')->name('team-pages.edit');
+    Route::put('/team-pages/update/{id}', 'update')->name('team-pages.update');
+    Route::delete('/team-pages/delete/{id}', 'destroy')->name('team-pages.delete');
 });
 
 
