@@ -52,7 +52,7 @@
 
                 <li>
                     <a href="{{ route('team-pages.index') }}" class="waves-effect">
-                        <i class="ri-home-4-line"></i>
+                        <i class="ri-team-line"></i>
                         <span>Team Members</span>
                     </a>
                 </li>
