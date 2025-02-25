@@ -57,6 +57,17 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-file-text-line"></i>
+                        <span>Projects</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('project-pages.index') }}">All Projects</a></li>
+                        <li><a href="{{ route('project-pages.insert') }}">Insert New Project</a></li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
         <!-- Sidebar -->

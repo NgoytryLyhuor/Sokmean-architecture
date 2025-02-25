@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="favicon.png">
+	<link rel="shortcut icon" href="{{ asset('backend/assets/images/logo.jpg') }}">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('global.css') }}" id="app-style" type="text/css" />
 
-	<title>Archiark</title>
+	<title>Norkor Architecture</title>
 </head>
 <body>
 
@@ -52,5 +52,6 @@
 	<script src="{{ asset('frontend/js/navbar.js') }}"></script>
 	<script src="{{ asset('frontend/js/counter.js') }}"></script>
 	<script src="{{ asset('frontend/js/custom.js') }}"></script>
+
 </body>
 </html>

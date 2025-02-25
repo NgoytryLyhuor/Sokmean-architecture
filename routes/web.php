@@ -4,6 +4,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
 
 Route::get('/dashboard', function () {
@@ -22,7 +23,7 @@ Route::controller(FrontendController::class)->group(function(){
     Route::get('/services','services')->name('services');
     Route::get('/about','about')->name('about');
     Route::get('/contact','contact')->name('contact');
-    Route::get('/project-details','project_details')->name('project_details');
+    Route::get('/project-details/{id}','project_details')->name('project_details');
 });
 
 // backend home page
@@ -46,8 +47,6 @@ Route::controller(HomePageController::class)->group(function(){
 
 });
 
-
-
 // backend Team page
 Route::controller(TeamController::class)->group(function () {
     Route::get('/team-pages', 'index')->name('team-pages.index');
@@ -56,6 +55,22 @@ Route::controller(TeamController::class)->group(function () {
     Route::put('/team-pages/update/{id}', 'update')->name('team-pages.update');
     Route::delete('/team-pages/delete/{id}', 'destroy')->name('team-pages.delete');
 });
+
+// backend project page
+Route::controller(ProjectController::class)->group(function () {
+    Route::get('/project-pages', 'index')->name('project-pages.index');
+    Route::get('/project-insert-pages', 'insert')->name('project-pages.insert');
+    Route::post('/project-pages/insert', 'insertCover')->name('project-pages.insertCover');
+    Route::get('/project-pages/edit/{id}', 'edit')->name('project-pages.edit');
+    Route::post('/project-pages/insert/project-path', 'insertProjectPath')->name('project-pages.insertProjectPath');
+    Route::get('/project-pages/edit/project-path/{id}', 'editProjectPath')->name('project-pages.editProjectPath');
+    Route::post('/project-pages/update/project-path', 'updateProjectPath')->name('project-pages.updateProjectPath');
+    Route::POST ('/project-pages/update/{id}', 'update')->name('project-pages.update');
+
+    Route::delete('/project-pages/delete/project', 'destroy')->name('project-pages.delete');
+    Route::delete('/project-pages/delete/project-path', 'destroyProjectPath')->name('project-pages.deleteProjectPath');
+});
+
 
 
 
