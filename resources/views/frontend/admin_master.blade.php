@@ -21,10 +21,18 @@
 	<link rel="stylesheet" href="{{ asset('frontend/css/glightbox.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('global.css') }}" id="app-style" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<title>Norkor Architecture</title>
 </head>
-<body>
+<body class="position-relative">
+
+    <!-- back_to_top -->
+    <div class="circle position-fixed back-to-top">
+        <div class="container-fluid h-100 d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-chevron-up text-white"></i>
+        </div>
+    </div>
 
     {{-- header --}}
     @include('frontend.components.header')
@@ -52,6 +60,26 @@
 	<script src="{{ asset('frontend/js/navbar.js') }}"></script>
 	<script src="{{ asset('frontend/js/counter.js') }}"></script>
 	<script src="{{ asset('frontend/js/custom.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if(scroll > 100){
+                $(".circle").css("display","block");
+            }
+            else{
+                $(".circle").css("display","none");
+            }
+        })
+            $(".back-to-top").click(function(){
+                $('html, body').animate({
+                    scrollTop: 0
+                }, '3000');
+            })
+        })
+    </script>
 
 </body>
 </html>

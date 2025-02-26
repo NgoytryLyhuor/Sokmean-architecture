@@ -42,7 +42,7 @@
 
 
                             <div class="d-flex justify-content-end mb-3">
-                                <button type="button" class="btn btn-outline-primary waves-effect waves-light p-1 px-3 api-width" data-bs-toggle="modal" data-bs-target="#insertModal">
+                                <button type="button" class="btn btn-warning waves-effect waves-light p-1 px-3 api-width" data-bs-toggle="modal" data-bs-target="#insertModal">
                                     Insert<i class=" ri-add-fill align-middle ms-2"></i>
                                 </button>
                             </div>

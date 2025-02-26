@@ -18,9 +18,8 @@
 
 <div class="section sec-4">
     <div class="container">
-
         <div class="row g-5">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
 
                 <div class="d-flex custom-card">
                     <div class="img">
@@ -35,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="d-flex custom-card">
                     <div class="img">
                         <i class="flaticon-plan"></i>
@@ -49,24 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="d-flex custom-card">
-                    <div class="img">
-                        <i class="flaticon-architect"></i>
-                    </div>
-                    <div class="text">
-                        <h3 class="h6 fw-bold text-black">Engineering Plan</h3>
-                        <p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
-                        <p>
-                            <a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4">
-
+            <div class="col-lg-6">
                 <div class="d-flex custom-card">
                     <div class="img">
                         <i class="flaticon-color-palette"></i>
@@ -80,21 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="d-flex custom-card">
-                    <div class="img">
-                        <i class="flaticon-ruler"></i>
-                    </div>
-                    <div class="text">
-                        <h3 class="h6 fw-bold text-black">Interior Planning</h3>
-                        <p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
-                        <p>
-                            <a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="d-flex custom-card">
                     <div class="img">
                         <i class="flaticon-wall"></i>

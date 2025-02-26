@@ -9,6 +9,37 @@
     white-space: normal !important;
 }
 
+.circle {
+    display: block; /* Changed from 'none' to 'block' to make it visible */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed; /* Use fixed positioning to keep it in place */
+    right: 20px;
+    bottom: 20px;
+    background-color: #fd5704a2;
+    z-index: 9999999;
+    animation: float 3s ease-in-out infinite; /* Added animation */
+}
+
+.circle:hover {
+    background-color: #fd5504;
+}
+
+.circle i {
+    font-size: 25px;
+}
+
+/* Keyframes for the floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at the original position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up by 20px */
+    }
+}
+
 
 @media (max-width: 767.98px) {
     .api-width {

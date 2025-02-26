@@ -69,6 +69,18 @@
                 </li>
 
             </ul>
+
+            <ul class="metismenu list-unstyled" id="side-menu">
+                <li class="menu-title">Other</li>
+
+                <li>
+                    <a href="{{ route('index') }}" class="waves-effect" target="_blank">
+                        <i class="ri-earth-line"></i>
+                        <span>Go to website</span>
+                    </a>
+                </li>
+
+            </ul>
         </div>
         <!-- Sidebar -->
     </div>

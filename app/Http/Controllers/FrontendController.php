@@ -25,6 +25,10 @@ class FrontendController extends Controller
         return view('frontend.contact');
     }
 
+    public function project(){
+        return view('frontend.projects');
+    }
+
     public function project_details($id) {
         $project = Project::findOrFail($id);
         $projectPath = ProjectPath::where('project_id',$project->id)->orderBy('id','asc')->get();

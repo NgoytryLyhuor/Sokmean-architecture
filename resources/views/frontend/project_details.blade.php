@@ -1,5 +1,11 @@
 @extends('frontend.admin_master')
 @section('frontend')
+
+@php
+    $number = 1;
+    $relateProject = App\Models\Project::orderBy('id','asc')->Limit(6)->whereNot('id',$project->id)->whereNot('id',1)->get();
+@endphp
+
     <div class="hero-2 overlay" style="background-image: url('{{ asset('backend/assets/images/project/' . $project->cover) }}');">
         <div class="container">
             <div class="row align-items-center">
@@ -41,82 +47,26 @@
                 <div class="col-lg-6">
                     <h2 class="heading">Related Projects</h2>
                 </div>
-                <div class="col-lg-6 ms-auto">
-                    <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias
-                        beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus
-                        itaque.</p>
-                </div>
             </div>
 
             <div class="row g-4">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="single-portfolio">
-                        <a href="">
-                            <img src="{{ asset('frontend/images/img_8.jpg') }}" alt="Image" class="img-fluid">
-                            <div class="contents">
-                                <h3>Project One</h3>
-                                <div class="cat">Construction</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="single-portfolio">
-                        <a href="">
-                            <img src="{{ asset('frontend/images/img_2.jpg') }}" alt="Image" class="img-fluid">
-                            <div class="contents">
-                                <h3>Project Two</h3>
-                                <div class="cat">Construction</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="single-portfolio">
-                        <a href="">
-                            <img src="{{ asset('frontend/images/img_3.jpg') }}" alt="Image" class="img-fluid">
-                            <div class="contents">
-                                <h3>Project One</h3>
-                                <div class="cat">Construction</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
 
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="single-portfolio">
-                        <a href="">
-                            <img src="{{ asset('frontend/images/img_4.jpg') }}" alt="Image" class="img-fluid">
-                            <div class="contents">
-                                <h3>Project One</h3>
-                                <div class="cat">Construction</div>
-                            </div>
-                        </a>
+                @foreach($relateProject as $data)
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="single-portfolio">
+                            <a href="{{ route('project_details', $data->id) }}">
+                                <img src="{{ asset('backend/assets/images/project/' . $data->cover) }}" alt="Image" style="width: 700px;height: 370px;object-fit: cover" class="img-fluid">
+                                <div class="contents">
+                                    <h3>{{ $data->title }}</h3>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="single-portfolio">
-                        <a href="">
-                            <img src="{{ asset('frontend/images/img_5.jpg') }}" alt="Image" class="img-fluid">
-                            <div class="contents">
-                                <h3>Project Two</h3>
-                                <div class="cat">Construction</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="single-portfolio">
-                        <a href="">
-                            <img src="{{ asset('frontend/images/img_6.jpg') }}" alt="Image" class="img-fluid">
-                            <div class="contents">
-                                <h3>Project One</h3>
-                                <div class="cat">Construction</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                @endforeach
 
+                <div class="col-md-12 text-center mt-5">
+                    <p><a href="{{ route('project') }}" class="btn btn-primary me-4">See all projects</a></p>
+                </div>
 
             </div>
         </div>

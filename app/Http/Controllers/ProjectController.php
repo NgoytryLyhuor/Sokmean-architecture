@@ -13,7 +13,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $project_data = Project::orderBy('id','desc')->get();
+        $project_data = Project::orderBy('id','desc')->whereNot('id',1)->get();
 
         return view('admin.project.index',compact('project_data'));
     }

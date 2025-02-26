@@ -9,7 +9,7 @@
     $section_four_items   = App\Models\HomePage::whereNotIn('id', [1, 2, 3, 4])->get();
     $number = 1;
 
-    $project        = App\Models\Project::orderBy('id','asc')->Limit(6)->get();
+    $project        = App\Models\Project::orderBy('id','asc')->Limit(6)->whereNot('id',1)->get();
 
 @endphp
 
@@ -126,9 +126,6 @@
             <div class="col-lg-6">
                 <h2 class="heading">Projects</h2>
             </div>
-            <div class="col-lg-4">
-                <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p>
-            </div>
         </div>
 
         <div class="row g-4">
@@ -147,7 +144,7 @@
             @endforeach
 
             <div class="col-md-12 text-center mt-5">
-                <p><a href="#" class="btn btn-primary me-4">See all projects</a></p>
+                <p><a href="{{ route('project') }}" class="btn btn-primary me-4">See all projects</a></p>
             </div>
 
         </div>
@@ -160,6 +157,6 @@
 @include('frontend.components.members')
 
 {{-- include members here  --}}
-@include('frontend.components.news')
+{{-- @include('frontend.components.news') --}}
 
 @endsection

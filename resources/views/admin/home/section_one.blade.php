@@ -61,7 +61,7 @@
 
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label"></label>
-                                    <video id="show_video" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important; height:160px !important;" controls muted>
+                                    <video id="show_video" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important; height:160px !important;" controls muted autoplay>
                                         <source src="{{ asset('backend/assets/images/homePage/' . $data->video_url) }}" type="video/mp4">
                                     </video>
                                 </div>

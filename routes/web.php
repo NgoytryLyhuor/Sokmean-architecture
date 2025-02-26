@@ -23,6 +23,7 @@ Route::controller(FrontendController::class)->group(function(){
     Route::get('/services','services')->name('services');
     Route::get('/about','about')->name('about');
     Route::get('/contact','contact')->name('contact');
+    Route::get('/projects','project')->name('project');
     Route::get('/project-details/{id}','project_details')->name('project_details');
 });
 
