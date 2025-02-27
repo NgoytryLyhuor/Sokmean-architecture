@@ -2,6 +2,7 @@
 @section('frontend')
 
 @php
+    use Illuminate\Support\Str;
     $number = 1;
     $relateProject = App\Models\Project::orderBy('id','asc')->Limit(6)->whereNot('id',$project->id)->whereNot('id',1)->get();
 @endphp
@@ -54,8 +55,9 @@
                 @foreach($relateProject as $data)
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                         <div class="single-portfolio">
-                            <a href="{{ route('project_details', $data->id) }}">
-                                <img src="{{ asset('backend/assets/images/project/' . $data->cover) }}" alt="Image" style="width: 700px;height: 370px;object-fit: cover" class="img-fluid">
+                            <a href="{{ route('project_details', Str::slug(Str::lower($data->title), '-')) }}">
+                                <img src="{{ asset('backend/assets/images/project/' . $data->cover) }}" alt="Image"
+                                        style="width: 700px;height: 370px;object-fit: cover" class="img-fluid">
                                 <div class="contents">
                                     <h3>{{ $data->title }}</h3>
                                 </div>

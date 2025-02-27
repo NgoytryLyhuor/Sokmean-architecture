@@ -24,7 +24,7 @@ Route::controller(FrontendController::class)->group(function(){
     Route::get('/about','about')->name('about');
     Route::get('/contact','contact')->name('contact');
     Route::get('/projects','project')->name('project');
-    Route::get('/project-details/{id}','project_details')->name('project_details');
+    Route::get('/project-details/{slug}', 'project_details')->name('project_details');
 });
 
 // backend home page

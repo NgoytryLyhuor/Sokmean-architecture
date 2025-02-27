@@ -1,4 +1,4 @@
-<div class="section sec-news">
+{{-- <div class="section sec-news">
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-6">
@@ -58,4 +58,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

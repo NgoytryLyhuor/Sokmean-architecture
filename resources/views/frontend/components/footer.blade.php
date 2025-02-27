@@ -18,8 +18,8 @@
                         <li><a href="#"><span class="icon-facebook"></span></a></li>
                         <li><a href="#"><span class="icon-twitter"></span></a></li>
                         <li><a href="#"><span class="icon-instagram"></span></a></li>
-                        <li><a href="#"><span class="icon-dribbble"></span></a></li>
                         <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                        <li><a href="#"><span class="icon-telegram"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -30,35 +30,35 @@
                             <h3 class="line-top">Navigations</h3>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('index') }}">Home</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('project') }}">Projects</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('services') }}">Services</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('about') }}">About</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
@@ -74,10 +74,7 @@
                 <p class="small text-black-50">Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());
-                    </script>. All Rights Reserved. &mdash; Designed with love by <a
-                        href="https://untree.co">Untree.co</a></br>Distributed By <a
-                        href="https://themewagon.com/">Themewagon</a>
-                    <!-- License information: https://untree.co/license/ -->
+                    </script>
                 </p>
             </div>
         </div>

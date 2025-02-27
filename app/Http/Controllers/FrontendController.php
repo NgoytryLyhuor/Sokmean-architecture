@@ -29,10 +29,12 @@ class FrontendController extends Controller
         return view('frontend.projects');
     }
 
-    public function project_details($id) {
-        $project = Project::findOrFail($id);
-        $projectPath = ProjectPath::where('project_id',$project->id)->orderBy('id','asc')->get();
-        return view('frontend.project_details', compact('project','projectPath'));
+    public function project_details($slug) {
+        $project = Project::whereRaw("LOWER(REPLACE(title, ' ', '-')) = ?", [strtolower($slug)])->firstOrFail();
+        $projectPath = ProjectPath::where('project_id', $project->id)->orderBy('id', 'asc')->get();
+        return view('frontend.project_details', compact('project', 'projectPath'));
     }
+
+
 
 }
