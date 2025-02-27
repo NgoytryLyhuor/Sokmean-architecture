@@ -30,35 +30,35 @@
                             <h3 class="line-top">Navigations</h3>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('index') }}">Home</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('project') }}">Projects</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('services') }}">Services</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('about') }}">About</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <div class="widget">
                             <ul class="links list-unstyled">
                                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
