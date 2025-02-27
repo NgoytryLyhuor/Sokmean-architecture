@@ -33,33 +33,11 @@
                     <div class="col-6 col-sm-6 col-md-4">
                         <div class="widget">
                             <ul class="links list-unstyled">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Work</a></li>
-                                <li><a href="#">Process</a></li>
-                                <li><a href="#">About Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4">
-                        <div class="widget">
-                            <ul class="links list-unstyled">
-                                <li><a href="#">Press</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">Privacy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4">
-                        <div class="widget">
-                            <ul class="links list-unstyled">
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Process</a></li>
-                                <li><a href="#">About Us</a></li>
+                                <li><a href="{{ route('index') }}">Home</a></li>
+                                <li><a href="{{ route('project') }}">Projects</a></li>
+                                <li><a href="{{ route('services') }}">Services</a></li>
+                                <li><a href="{{ route('about') }}">About</a></li>
+                                <li><a href="{{ route('contact') }}">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
