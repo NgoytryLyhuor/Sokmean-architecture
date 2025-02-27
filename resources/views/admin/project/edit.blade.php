@@ -126,7 +126,7 @@
                                         <tr class="odd">
                                             <td>{{ $i++ }}</td>
                                             <td>{{ $data->title }}</td>
-                                            <td class="api-none">{{ $data->description }}</td>
+                                            <td class="api-td api-none">{{ $data->description }}</td>
                                             <td>
                                                 <img width="85px"
                                                     src="{{ asset('backend/assets/images/project/' . $data->cover) }}"
