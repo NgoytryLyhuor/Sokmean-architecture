@@ -252,7 +252,7 @@
 
 
 .sec-4, .sec-5, .sec-news {
-	
+
 	.heading {
 		margin-bottom: 70px;
 		font-weight: bold;
@@ -276,7 +276,7 @@
 
 .testimonial-item {
 	text-align: center;
-	.testimonial-item-inner {		
+	.testimonial-item-inner {
 		padding: 50px 30px;
 		background: $white;
 		border-radius: 10px;
@@ -317,17 +317,17 @@
 		padding-bottom: 100px!important;
 	}
 
-	
+
 	.tns-item {
 		opacity: .3;
 		transition: .3s all ease;
 		transform: scale(0.9);
-		
+
 	}
 
 
-	.tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active { 
-		opacity: 1; 
+	.tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active {
+		opacity: 1;
 
 		transform: scale(1.0);
 		.testimonial-item-inner {
@@ -339,11 +339,11 @@
 
 		}
 
-	}	
+	}
 
 	.tns-item:not(.tns-slide-active) + .tns-slide-active {
 		@include media-breakpoint-down(md) {
-			opacity: 1; 
+			opacity: 1;
 		}
 
 	}
@@ -427,6 +427,7 @@
 		bottom: 0;
 		z-index: 2;
 		background: rgba($black, .5);
+        border-radius: 15px;
 	}
 }
 
@@ -764,7 +765,7 @@
 		overflow: hidden;
 		position: relative;
 		display: block;
-		
+
 		&:before {
 			position: absolute;
 			content: "";
@@ -782,7 +783,7 @@
 		}
 
 		.contents {
-			
+
 			margin-top: 20px;
 			visibility: visible;
 			margin-top: 20px;
@@ -811,7 +812,7 @@
 				margin-top: 0px;
 				opacity: 1;
 				visibility: visible;
-				
+
 			}
 		}
 	}
