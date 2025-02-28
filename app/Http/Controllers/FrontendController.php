@@ -17,6 +17,23 @@ class FrontendController extends Controller
         return view('frontend.services');
     }
 
+    public function service_details($slug){
+
+        if($slug === 'interior-design'){
+            return view('frontend.service_details_1');
+        }
+        if($slug === 'landscape-design'){
+            return view('frontend.service_details_2');
+        }
+        if($slug === 'architecture-design'){
+            return view('frontend.service_details_3');
+        }
+        if($slug === 'floor-plan'){
+            return view('frontend.service_details_4');
+        }
+
+    }
+
     public function about(){
         return view('frontend.about');
     }
