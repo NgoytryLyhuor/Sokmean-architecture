@@ -18,26 +18,42 @@
 <div class="py-5">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-lg-8">
-                <h2 class="mb-4 fw-bold">Transform Your Outdoor Space</h2>
-                <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b>, we believe that a well-designed landscape is an extension of your home. Our landscape design services blend nature, beauty, and functionality to create outdoor spaces that inspire relaxation, entertainment, and connection with the environment.</p>
+            <div class="col-lg-6">
+                <h2 class="mb-4 fw-bold">Beautiful and Functional Outdoor Spaces</h2>
+                <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b>, we believe that outdoor spaces are just as important as indoor ones. Our landscape design services focus on creating beautiful, functional, and sustainable outdoor environments that complement your property and enhance your lifestyle.</p>
 
-                <p>From lush gardens to functional patios, we design outdoor spaces that reflect your lifestyle and enhance your property's value.</p>
+                <p>From lush gardens to modern hardscapes, we design outdoor spaces that are both visually stunning and practical for everyday use.</p>
             </div>
-            <div class="col-lg-4">
-                <div class="card shadow-sm">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title h5 fw-bold mb-3">Our Landscape Design Services Include:</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent">Custom garden layouts and plant selection</li>
-                            <li class="list-group-item bg-transparent">Outdoor lighting and water features</li>
-                            <li class="list-group-item bg-transparent">Patio and deck design</li>
-                            <li class="list-group-item bg-transparent">Sustainable and eco-friendly designs</li>
-                            <li class="list-group-item bg-transparent">Hardscaping and pathway design</li>
-                            <li class="list-group-item bg-transparent">Irrigation and drainage solutions</li>
-                            <li class="list-group-item bg-transparent">Outdoor furniture and decor</li>
-                            <li class="list-group-item bg-transparent">Seasonal maintenance planning</li>
-                        </ul>
+                        <h3 class="card-title h5 fw-bold mb-3 text-primary">Our Landscape Design Services Include:</h3>
+                        <ol class="list-group list-group-flush custom-list">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">1.</span> Custom landscape design tailored to your property and preferences.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">2.</span> Garden design and planting plans for lush, vibrant outdoor spaces.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">3.</span> Hardscape design for patios, walkways, and outdoor structures.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">4.</span> Sustainable landscaping with eco-friendly materials and practices.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">5.</span> Irrigation system design and water management solutions.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">6.</span> Outdoor lighting design to enhance ambiance and functionality.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">7.</span> Pool and water feature design for luxurious outdoor living.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">8.</span> Maintenance planning to keep your landscape thriving year-round.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -47,43 +63,59 @@
 
 <div class="py-5 bg-light">
     <div class="container">
-        <div class="row my-5">
-            <div class="col-12">
-                <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">01</div>
-                        <h3 class="card-title h5 fw-bold">Site Analysis</h3>
-                        <p class="card-text">We assess your property's topography, soil, climate, and existing features to create a tailored design plan.</p>
+        <h2 class="text-center mb-4 fw-bold">Our Landscape Design Process</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">01</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Site Assessment</h3>
+                        <p class="card-text text-muted">We analyze the site’s conditions, including soil quality, climate, and existing elements.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">02</div>
-                        <h3 class="card-title h5 fw-bold">Concept Development</h3>
-                        <p class="card-text">We create mood boards, sketches, and 3D renderings to bring your outdoor vision to life.</p>
+            <div class="col-lg-3 col-md-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">02</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Conceptual Design</h3>
+                        <p class="card-text text-muted">We develop initial design concepts based on your preferences and site analysis.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">03</div>
-                        <h3 class="card-title h5 fw-bold">Design Refinement</h3>
-                        <p class="card-text">We refine the design based on your feedback, finalizing plant selections, materials, and layouts.</p>
+            <div class="col-lg-3 col-md-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">03</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Master Planning</h3>
+                        <p class="card-text text-muted">We create a detailed layout with elements such as paths, gardens, patios, and water features.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">04</div>
-                        <h3 class="card-title h5 fw-bold">Implementation</h3>
-                        <p class="card-text">Our team oversees the installation, ensuring every detail aligns with the design plan.</p>
+            <div class="col-lg-3 col-md-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">04</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Design Refinement</h3>
+                        <p class="card-text text-muted">Refine the design, ensuring practical aspects like irrigation, lighting, and traffic flow.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">05</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Material Selection</h3>
+                        <p class="card-text text-muted">Choose the materials for hardscapes such as paving, stones, fences, and garden structures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">06</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Implementation & Maintenance</h3>
+                        <p class="card-text text-muted">We implement the design and provide a maintenance plan to keep the landscape in excellent condition.</p>
                     </div>
                 </div>
             </div>
@@ -131,43 +163,10 @@
     </div>
 </div>
 
-<div class="py-5 bg-light">
-    <div class="container">
-        <div class="row my-5">
-            <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">Our Design Philosophy</h2>
-                <p>We believe that a well-designed landscape should harmonize with its surroundings while meeting your practical needs. Our designs are rooted in:</p>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Sustainability and eco-friendliness</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Seamless integration with nature</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Functionality for outdoor living</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Timeless beauty and elegance</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://landscapesbyterra.com/img/asset/YXNzZXRzL2Jsb2cvY29udGVtcG9yYXJ5LWNhbG0xMS5qcGc=?h=1000&s=f2ade74b255a8d687762cfb815789c1b" alt="Our Design Philosophy" class="img-fluid rounded shadow-sm">
-            </div>
-        </div>
-    </div>
+<div class="bg-light">
+    {{-- include services here  --}}
+    @include('frontend.components.services')
 </div>
-
-{{-- include services here  --}}
-@include('frontend.components.services')
-
 
 {{-- include members here  --}}
 @include('frontend.components.members')

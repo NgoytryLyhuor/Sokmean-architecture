@@ -18,26 +18,42 @@
 <div class="py-5">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-lg-8">
-                <h2 class="mb-4 fw-bold">Reimagine Your Living Space</h2>
-                <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b> we believe interior design goes beyond aesthetics—it's about creating environments that enhance your daily experience. Our comprehensive interior design services blend artistry with functionality to craft spaces that reflect your personality and lifestyle.</p>
+            <div class="col-lg-6">
+                <h2 class="mb-4 fw-bold">Stylish and Functional Interior Spaces</h2>
+                <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b>, we specialize in creating interior spaces that are not only beautiful but also functional and reflective of your personal style. Our interior design services transform your vision into reality, ensuring every detail is perfect.</p>
 
-                <p>Our team of experienced designers approaches each project with fresh eyes, developing custom solutions that maximize your space's potential while addressing your unique needs and preferences.</p>
+                <p>From concept to completion, we design interiors that are tailored to your lifestyle, preferences, and budget.</p>
             </div>
-            <div class="col-lg-4">
-                <div class="card shadow-sm">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title h5 fw-bold mb-3">Our Interior Design Services Include:</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent">Space planning and layout optimization</li>
-                            <li class="list-group-item bg-transparent">Color scheme development</li>
-                            <li class="list-group-item bg-transparent">Furniture selection and arrangement</li>
-                            <li class="list-group-item bg-transparent">Custom cabinetry and built-in design</li>
-                            <li class="list-group-item bg-transparent">Material and finish selection</li>
-                            <li class="list-group-item bg-transparent">Lighting design and fixtures</li>
-                            <li class="list-group-item bg-transparent">Art and accessory curation</li>
-                            <li class="list-group-item bg-transparent">Window treatments</li>
-                        </ul>
+                        <h3 class="card-title h5 fw-bold mb-3 text-primary">Our Interior Design Services Include:</h3>
+                        <ol class="list-group list-group-flush custom-list">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">1.</span> Custom interior design tailored to your style and needs.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">2.</span> Space planning and layout optimization for functionality.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">3.</span> Selection of furniture, fixtures, and finishes.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">4.</span> Color scheme and material selection for cohesive design.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">5.</span> Lighting design to enhance ambiance and functionality.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">6.</span> Kitchen and bathroom design for modern, efficient spaces.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">7.</span> Custom cabinetry and built-in storage solutions.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">8.</span> Project management and coordination with contractors.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -47,43 +63,50 @@
 
 <div class="py-5 bg-light">
     <div class="container">
-        <div class="row my-5">
-            <div class="col-12">
-                <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">01</div>
-                        <h3 class="card-title h5 fw-bold">Consultation</h3>
-                        <p class="card-text">We begin with an in-depth discussion about your vision, needs, budget, and timeline to establish the foundation of your project.</p>
+        <h2 class="text-center mb-4 fw-bold">Our Interior Design Process</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">01</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Initial Consultation</h3>
+                        <p class="card-text text-muted">We understand your goals, preferences, and budget to establish the foundation of your interior design.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">02</div>
-                        <h3 class="card-title h5 fw-bold">Concept Development</h3>
-                        <p class="card-text">Our designers create mood boards, spatial plans, and preliminary design concepts that align with your aesthetic and functional requirements.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">02</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Space Planning</h3>
+                        <p class="card-text text-muted">We design the layout to optimize the functionality, flow, and aesthetic appeal of the space.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">03</div>
-                        <h3 class="card-title h5 fw-bold">Design Refinement</h3>
-                        <p class="card-text">We refine designs based on your feedback, finalizing selections for materials, furnishings, colors, and architectural elements.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">03</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Design Concept</h3>
+                        <p class="card-text text-muted">We develop the design concept, selecting color schemes, materials, furniture, and decor to create the desired style.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">04</div>
-                        <h3 class="card-title h5 fw-bold">Implementation</h3>
-                        <p class="card-text">Our team oversees the execution of the design plan, coordinating with contractors and vendors to ensure flawless implementation.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">04</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Execution</h3>
+                        <p class="card-text text-muted">We implement the design, selecting and installing furniture, finishes, and materials to bring the concept to life.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">05</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Styling & Final Touches</h3>
+                        <p class="card-text text-muted">We add accessories, decor, and artwork to create the final ambiance and complete the space.</p>
                     </div>
                 </div>
             </div>
@@ -131,43 +154,10 @@
     </div>
 </div>
 
-<div class="py-5 bg-light">
-    <div class="container">
-        <div class="row my-5">
-            <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">Our Design Philosophy</h2>
-                <p>We believe that great interior design should be both beautiful and practical. Our spaces are designed to be lived in, not just admired. We create interiors that:</p>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Reflect your personal style and preferences</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Function efficiently for your specific needs</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Create harmony through thoughtful space planning</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Incorporate elements that tell your unique story</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://i.pinimg.com/736x/1f/a1/37/1fa137c1c8ab7d55b28b05e15acb7106.jpg" alt="Our Design Philosophy" class="img-fluid rounded shadow-sm">
-            </div>
-        </div>
-    </div>
+<div class="bg-light">
+    {{-- include services here  --}}
+    @include('frontend.components.services')
 </div>
-
-{{-- include services here  --}}
-@include('frontend.components.services')
-
 
 {{-- include members here  --}}
 @include('frontend.components.members')

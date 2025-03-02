@@ -64,6 +64,36 @@ img{
     }
 }
 
+.custom-list {
+    list-style-type: none; /* Remove default numbering */
+    padding-left: 0; /* Remove default padding */
+}
+
+.custom-list li {
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.custom-list li .fw-bold {
+    margin-right: 10px; /* Add spacing between the number and text */
+    white-space: nowrap; /* Prevent the number from wrapping */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 767.98px) {
     .api-width {

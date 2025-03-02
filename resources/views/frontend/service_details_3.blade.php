@@ -18,26 +18,42 @@
 <div class="py-5">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-lg-8">
-                <h2 class="mb-4 fw-bold">Innovative Architectural Solutions</h2>
-                <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b>, we believe that architecture is more than just buildings—it's about creating spaces that inspire, uplift, and endure. Our architectural design services combine creativity, functionality, and sustainability to deliver structures that stand the test of time.</p>
+            <div class="col-lg-6">
+                <h2 class="mb-4 fw-bold">Innovative and Sustainable Architecture Design</h2>
+                <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b>, we believe that great architecture goes beyond aesthetics—it creates spaces that inspire, function seamlessly, and stand the test of time. Our architecture design services are tailored to bring your vision to life while incorporating sustainability, functionality, and modern design principles.</p>
 
-                <p>From residential homes to commercial spaces, we approach each project with a fresh perspective, ensuring every detail aligns with your vision and needs.</p>
+                <p>From conceptualization to completion, we work closely with you to design structures that reflect your unique style, meet your needs, and harmonize with their surroundings.</p>
             </div>
-            <div class="col-lg-4">
-                <div class="card shadow-sm">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title h5 fw-bold mb-3">Our Architecture Design Services Include:</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent">Custom home design</li>
-                            <li class="list-group-item bg-transparent">Commercial building design</li>
-                            <li class="list-group-item bg-transparent">Sustainable and green architecture</li>
-                            <li class="list-group-item bg-transparent">Structural engineering and planning</li>
-                            <li class="list-group-item bg-transparent">3D modeling and virtual walkthroughs</li>
-                            <li class="list-group-item bg-transparent">Renovation and restoration projects</li>
-                            <li class="list-group-item bg-transparent">Interior and exterior integration</li>
-                            <li class="list-group-item bg-transparent">Project management and oversight</li>
-                        </ul>
+                        <h3 class="card-title h5 fw-bold mb-3 text-primary">Our Architecture Design Services Include:</h3>
+                        <ol class="list-group list-group-flush custom-list">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">1.</span> Conceptual design and master planning to create a cohesive vision for your project.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">2.</span> Residential architecture design tailored to your lifestyle and preferences.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">3.</span> Commercial and institutional architecture design for functional and inspiring spaces.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">4.</span> Sustainable and eco-friendly design solutions to reduce environmental impact.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">5.</span> 3D modeling and architectural visualization for realistic project previews.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">6.</span> Site analysis and feasibility studies to ensure optimal design execution.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">7.</span> Building code compliance and permit documentation for seamless approvals.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <span class="fw-bold">8.</span> Construction documentation and project management support for accurate implementation.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -47,43 +63,59 @@
 
 <div class="py-5 bg-light">
     <div class="container">
-        <div class="row my-5">
-            <div class="col-12">
-                <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">01</div>
-                        <h3 class="card-title h5 fw-bold">Initial Consultation</h3>
-                        <p class="card-text">We discuss your vision, requirements, and budget to establish the project scope.</p>
+        <h2 class="text-center mb-4 fw-bold">Our Architecture Design Process</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">01</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Client Consultation</h3>
+                        <p class="card-text text-muted">We begin by meeting with you to understand your needs, preferences, and vision for the project. This phase sets the direction for everything that follows.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">02</div>
-                        <h3 class="card-title h5 fw-bold">Concept Development</h3>
-                        <p class="card-text">We create initial sketches, mood boards, and 3D models to visualize your project.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">02</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Site Analysis</h3>
+                        <p class="card-text text-muted">Our team conducts a thorough site survey to analyze the location's physical conditions, zoning regulations, and environmental factors to inform the design process.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">03</div>
-                        <h3 class="card-title h5 fw-bold">Design Refinement</h3>
-                        <p class="card-text">We refine the design based on your feedback, finalizing materials, layouts, and details.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">03</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Conceptual Design</h3>
+                        <p class="card-text text-muted">We develop initial design concepts, exploring layout options, style, and functionality to align with your needs and the site’s characteristics.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">04</div>
-                        <h3 class="card-title h5 fw-bold">Construction Oversight</h3>
-                        <p class="card-text">We oversee the construction process to ensure the design is executed flawlessly.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">04</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Design Development</h3>
+                        <p class="card-text text-muted">After refining the concept, we incorporate more details, including structural, mechanical, and electrical systems, while ensuring aesthetic integrity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">05</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Design Finalization</h3>
+                        <p class="card-text text-muted">We finalize the design, specifying materials, finishes, and other details, and present it for your review and approval.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">06</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Construction Documentation</h3>
+                        <p class="card-text text-muted">Detailed architectural drawings, specifications, and plans are prepared, providing everything necessary for construction to begin.</p>
                     </div>
                 </div>
             </div>
@@ -131,42 +163,10 @@
     </div>
 </div>
 
-<div class="py-5 bg-light">
-    <div class="container">
-        <div class="row my-5">
-            <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">Our Design Philosophy</h2>
-                <p>We believe that great architecture balances form and function. Our designs are rooted in:</p>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Innovation and creativity</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Sustainability and energy efficiency</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Timeless aesthetics</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Client-centric solutions</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://i.pinimg.com/736x/09/27/51/0927518bcf3be7562036ddcfe0f8674e.jpg" alt="Our Design Philosophy" class="img-fluid rounded shadow-sm">
-            </div>
-        </div>
-    </div>
+<div class="bg-light">
+    {{-- include services here  --}}
+    @include('frontend.components.services')
 </div>
-
-{{-- include services here  --}}
-@include('frontend.components.services')
 
 {{-- include members here  --}}
 @include('frontend.components.members')
