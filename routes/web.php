@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
+use Illuminate\Support\Facades\Artisan;
+
 
 Route::get('/dashboard', function () {
     return view('admin.index');
@@ -79,6 +81,16 @@ Route::controller(ProjectController::class)->group(function () {
 });
 
 
+Route::get('/clear', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    Artisan::call('config:cache');
+    Artisan::call('optimize');
+
+    return "Cache cleared!";
+});
 
 
 
