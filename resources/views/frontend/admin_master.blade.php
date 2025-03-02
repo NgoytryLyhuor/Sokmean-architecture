@@ -1,3 +1,6 @@
+@php
+    $version = App\Models\Setting::Where('id',1)->first();;
+@endphp
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,13 +17,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="{{ asset('frontend/fonts/icomoon/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('frontend/fonts/flaticon/font/flaticon.css') }}">
-	<link rel="stylesheet" href="{{ asset('frontend/css/tiny-slider.css') }}">
-	<link rel="stylesheet" href="{{ asset('frontend/css/aos.css') }}">
-	<link rel="stylesheet" href="{{ asset('frontend/css/glightbox.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('global.css') }}" id="app-style" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('frontend/fonts/icomoon/style.css') }}?version={{ $version->version }}">
+	<link rel="stylesheet" href="{{ asset('frontend/fonts/flaticon/font/flaticon.css') }}?version={{ $version->version }}">
+	<link rel="stylesheet" href="{{ asset('frontend/css/tiny-slider.css') }}?version={{ $version->version }}">
+	<link rel="stylesheet" href="{{ asset('frontend/css/aos.css') }}?version={{ $version->version }}">
+	<link rel="stylesheet" href="{{ asset('frontend/css/glightbox.min.css') }}?version={{ $version->version }}">
+	<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}?version={{ $version->version }}">
+    <link rel="stylesheet" href="{{ asset('global.css') }}?version={{ $version->version }}" id="app-style" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<title>Norkor Architecture</title>
@@ -53,13 +56,13 @@
 		</div>
 	</div>
 
-	<script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
-	<script src="{{ asset('frontend/js/tiny-slider.js') }}"></script>
-	<script src="{{ asset('frontend/js/aos.js') }}"></script>
-	<script src="{{ asset('frontend/js/glightbox.min.js') }}"></script>
-	<script src="{{ asset('frontend/js/navbar.js') }}"></script>
-	<script src="{{ asset('frontend/js/counter.js') }}"></script>
-	<script src="{{ asset('frontend/js/custom.js') }}"></script>
+	<script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}?version={{ $version->version }}"></script>
+	<script src="{{ asset('frontend/js/tiny-slider.js') }}?version={{ $version->version }}"></script>
+	<script src="{{ asset('frontend/js/aos.js') }}?version={{ $version->version }}"></script>
+	<script src="{{ asset('frontend/js/glightbox.min.js') }}?version={{ $version->version }}"></script>
+	<script src="{{ asset('frontend/js/navbar.js') }}?version={{ $version->version }}"></script>
+	<script src="{{ asset('frontend/js/counter.js') }}?version={{ $version->version }}"></script>
+	<script src="{{ asset('frontend/js/custom.js') }}?version={{ $version->version }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <script>
