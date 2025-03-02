@@ -1,5 +1,5 @@
 @php
-    $data = App\Models\Team::all();
+    $data = App\Models\Team::Where('role','testimonial')->get();
 @endphp
 
 <div class="sec-4 section">
@@ -21,7 +21,7 @@
                         <div class="testimonial-item">
                             <div class="testimonial-item-inner">
                                 <div class="testimonial-author mb-5">
-                                    <img style="height: 80px;width: 80px;object-fit: cover" src="{{ asset('backend/assets/images/team/' . $item->image) }}" alt="Image" class="img-fluid">
+                                    <img style="height: 80px;width: 80px;object-fit: cover" src="{{ asset('backend/assets/images/testimonial/' . $item->image) }}" alt="Image" class="img-fluid">
                                     <strong class="d-block">{{ $item->name }}</strong>
                                     <span>{{ $item->position }}</span>
                                 </div>
@@ -36,7 +36,7 @@
                         <div class="testimonial-item">
                             <div class="testimonial-item-inner" style="background-color: #000">
                                 <div class="testimonial-author mb-5">
-                                    <img style="height: 80px;width: 80px;object-fit: cover" src="{{ asset('backend/assets/images/team/' . $item->image) }}" alt="Image" class="img-fluid">
+                                    <img style="height: 80px;width: 80px;object-fit: cover" src="{{ asset('backend/assets/images/testimonial/' . $item->image) }}" alt="Image" class="img-fluid">
                                     <strong class="d-block text-white">{{ $item->name }}</strong>
                                     <span>{{ $item->position }}</span>
                                 </div>

@@ -3,19 +3,20 @@
 
 @php
     $section_one = App\Models\HomePage::where('id',1)->first();
-    $team = App\Models\Team::orderBy('id','desc')->get();
+    $team = App\Models\Team::orderBy('id','desc')->Where('role','member')->get();
+    $about = App\Models\About::FindOrFail(1);
 @endphp
 
-<div class="hero-2 overlay" style="background-image: url('{{ asset('frontend/images/img_3.jpg') }}');">
+<div class="hero-2 overlay" style="background-image: url('{{ asset('backend/assets/images/about/'.$about->banner) }}');">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 mx-auto ">
-                <h1 class="mb-5 text-center"><span>About Us</span></h1>
+                <h1 class="mb-5 text-center"><span>{{ $about->title }}</span></h1>
 
 
                 <div class="intro-desc text-left">
                     <div class="line"></div>
-                    <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p>
+                    <p>{{ $about->banner_title }}</p>
                 </div>
             </div>
         </div>

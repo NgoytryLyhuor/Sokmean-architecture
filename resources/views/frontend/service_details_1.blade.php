@@ -18,14 +18,14 @@
 <div class="py-5">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <h2 class="mb-4 fw-bold">Stylish and Functional Interior Spaces</h2>
                 <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b>, we specialize in creating interior spaces that are not only beautiful but also functional and reflective of your personal style. Our interior design services transform your vision into reality, ensuring every detail is perfect.</p>
 
                 <p>From concept to completion, we design interiors that are tailored to your lifestyle, preferences, and budget.</p>
             </div>
-            <div class="col-lg-6">
-                <div class="card border-0 shadow-sm">
+            <div class="col-lg-12">
+                <div class="card border-0" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
                     <div class="card-body">
                         <h3 class="card-title h5 fw-bold mb-3 text-primary">Our Interior Design Services Include:</h3>
                         <ol class="list-group list-group-flush custom-list">

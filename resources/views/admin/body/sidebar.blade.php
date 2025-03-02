@@ -58,6 +58,13 @@
                 </li>
 
                 <li>
+                    <a href="{{ route('testimonial-pages.index') }}" class="waves-effect">
+                        <i class="ri-team-line"></i>
+                        <span>Testimonial</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-file-text-line"></i>
                         <span>Projects</span>
@@ -66,6 +73,13 @@
                         <li><a href="{{ route('project-pages.index') }}">All Projects</a></li>
                         <li><a href="{{ route('project-pages.insert') }}">Insert New Project</a></li>
                     </ul>
+                </li>
+
+                <li>
+                    <a href="{{ route('about-pages.index') }}" class="waves-effect">
+                        <i class="ri-team-line"></i>
+                        <span>About Page</span>
+                    </a>
                 </li>
 
             </ul>

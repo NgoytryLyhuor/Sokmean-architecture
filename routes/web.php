@@ -1,12 +1,13 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
-use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\TestimonialController;
 
 
 Route::get('/dashboard', function () {
@@ -65,6 +66,21 @@ Route::controller(TeamController::class)->group(function () {
     Route::delete('/team-pages/delete/{id}', 'destroy')->name('team-pages.delete');
 });
 
+// backend Testimonial page
+Route::controller(TestimonialController::class)->group(function () {
+    Route::get('/testimonial-pages', 'index')->name('testimonial-pages.index');
+    Route::post('/testimonial-pages/insert', 'store')->name('testimonial-pages.store');
+    Route::get('/testimonial-pages/edit', 'edit')->name('testimonial-pages.edit');
+    Route::put('/testimonial-pages/update/{id}', 'update')->name('testimonial-pages.update');
+    Route::delete('/testimonial-pages/delete/{id}', 'destroy')->name('testimonial-pages.delete');
+});
+
+// backend About page
+Route::controller(AboutController::class)->group(function () {
+    Route::get('/about-pages', 'index')->name('about-pages.index');
+    Route::post('/about-pages/update', 'update')->name('about-pages.update');
+});
+
 // backend project page
 Route::controller(ProjectController::class)->group(function () {
     Route::get('/project-pages', 'index')->name('project-pages.index');
@@ -79,19 +95,6 @@ Route::controller(ProjectController::class)->group(function () {
     Route::delete('/project-pages/delete/project', 'destroy')->name('project-pages.delete');
     Route::delete('/project-pages/delete/project-path', 'destroyProjectPath')->name('project-pages.deleteProjectPath');
 });
-
-
-Route::get('/clear', function() {
-    Artisan::call('cache:clear');
-    Artisan::call('config:clear');
-    Artisan::call('view:clear');
-    Artisan::call('route:clear');
-    Artisan::call('config:cache');
-    Artisan::call('optimize');
-
-    return "Cache cleared!";
-});
-
 
 
 

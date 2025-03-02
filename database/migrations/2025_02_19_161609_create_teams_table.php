@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('position');
             $table->text('description')->nullable();
             $table->string('image')->nullable(); // Add image field
+            $table->string('role')->nullable(); // Add image field
             $table->timestamps();
         });
     }

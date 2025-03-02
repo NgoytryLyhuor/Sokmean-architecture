@@ -5,20 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
-class TeamController extends Controller
+class TestimonialController extends Controller
 {
-    /**
-     * Display a listing of the teams.
-     */
     public function index()
     {
-        $teams = Team::orderBy('id','desc')->Where('role','member')->get();
-        return view('admin.team.index',compact('teams'));
+        $testimonial = Team::orderBy('id','desc')->Where('role','testimonial')->get();
+        return view('admin.testimonial.index',compact('testimonial'));
     }
 
-    /**
-     * Store a newly created team.
-     */
+
     public function store(Request $request)
     {
         $request->validate([
@@ -33,7 +28,7 @@ class TeamController extends Controller
         // Handle Image Upload
         if ($request->hasFile('image')) {
             $imageName = time() . '_' . $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path('backend/assets/images/team/'), $imageName);
+            $request->file('image')->move(public_path('backend/assets/images/testimonial/'), $imageName);
             $team->image = $imageName;
         }
 
@@ -41,7 +36,8 @@ class TeamController extends Controller
         $team->name = $request->name;
         $team->position = $request->position;
         $team->description = $request->description;
-        $team->role = 'member';
+        $team->role = 'testimonial';
+
 
         $team->save();
 
@@ -69,10 +65,6 @@ class TeamController extends Controller
     }
 
 
-
-    /**
-     * Update the specified team.
-     */
     public function update(Request $request, $id)
     {
         $team = Team::findOrFail($id);
@@ -87,13 +79,13 @@ class TeamController extends Controller
         // Handle Image Upload
         if ($request->hasFile('image')) {
             // Delete old image if it exists
-            if ($team->image && file_exists(public_path('backend/assets/images/team/' . $team->image))) {
-                unlink(public_path('backend/assets/images/team/' . $team->image));
+            if ($team->image && file_exists(public_path('backend/assets/images/testimonial/' . $team->image))) {
+                unlink(public_path('backend/assets/images/testimonial/' . $team->image));
             }
 
             // Store new image
             $imageName = time() . '_' . $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path('backend/assets/images/team/'), $imageName);
+            $request->file('image')->move(public_path('backend/assets/images/testimonial/'), $imageName);
             $team->image = $imageName;
         }
 
@@ -109,32 +101,22 @@ class TeamController extends Controller
     }
 
 
-    /**
-     * Remove the specified team.
-     */
     public function destroy($id)
     {
-        // Find the team record
         $team = Team::findOrFail($id);
 
-        // Check if the team has an associated image
         if ($team->image) {
-            // Define the full path to the image
-            $imagePath = public_path('backend/assets/images/team/' . $team->image);
+            $imagePath = public_path('backend/assets/images/testimonial/' . $team->image);
 
-            // Delete the image file if it exists
             if (file_exists($imagePath)) {
-                unlink($imagePath); // Use PHP's unlink() to delete the file
+                unlink($imagePath);
             }
         }
 
-        // Delete the team record from the database
         $team->delete();
 
-        // Add a success message to the session
-        session()->flash('success', 'Team deleted successfully');
+        session()->flash('success', 'Testimonial deleted successfully');
 
-        // Return a JSON response
-        return response()->json(['message' => 'Team deleted successfully']);
+        return response()->json(['message' => 'Testimonial deleted successfully']);
     }
 }

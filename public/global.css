@@ -79,6 +79,10 @@ img{
     white-space: nowrap; /* Prevent the number from wrapping */
 }
 
+.my-no-shadow{
+    box-shadow: none !important;
+}
+
 
 
 

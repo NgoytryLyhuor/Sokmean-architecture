@@ -3,14 +3,14 @@
 
 @php
     use Illuminate\Support\Str;
-    $section_one    = App\Models\HomePage::where('id',1)->first();
-    $section_two    = App\Models\HomePage::where('id',2)->first();
-    $section_three  = App\Models\HomePage::where('id',3)->first();
-    $section_four   = App\Models\HomePage::where('id',4)->first();
-    $section_four_items   = App\Models\HomePage::whereNotIn('id', [1, 2, 3, 4])->get();
+    $section_one = App\Models\HomePage::where('id',1)->first();
+    $section_two = App\Models\HomePage::where('id',2)->first();
+    $section_three = App\Models\HomePage::where('id',3)->first();
+    $section_four = App\Models\HomePage::where('id',4)->first();
+    $section_four_items = App\Models\HomePage::whereNotIn('id', [1, 2, 3, 4])->get();
     $number = 1;
 
-    $project        = App\Models\Project::orderBy('id','asc')->Limit(6)->whereNot('id',1)->get();
+    $project = App\Models\Project::orderBy('id','asc')->Limit(6)->whereNot('id',1)->get();
 
 @endphp
 
