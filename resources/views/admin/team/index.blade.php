@@ -3,6 +3,9 @@
     @php
         $id = Auth::user()->id;
         $adminData = App\Models\User::find($id);
+        if ($id == null) {
+            return redirect()->route('login');
+        }
     @endphp
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <div class="page-content">

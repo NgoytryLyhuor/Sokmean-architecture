@@ -42,7 +42,12 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+
+<div class="py-5 bg-light">
+    <div class="container">
         <div class="row my-5">
             <div class="col-12">
                 <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
@@ -84,7 +89,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<div class="py-5">
+    <div class="container">
         <div class="my-5">
             <h2 class="text-center mb-4 fw-bold">Featured Interior Projects</h2>
             <div class="row g-4">
@@ -120,7 +129,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<div class="py-5 bg-light">
+    <div class="container">
         <div class="row my-5">
             <div class="col-lg-6">
                 <h2 class="fw-bold mb-4">Our Design Philosophy</h2>

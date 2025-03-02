@@ -42,7 +42,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<div class="py-5 bg-light">
+    <div class="container">
         <div class="row my-5">
             <div class="col-12">
                 <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
@@ -84,7 +88,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<div class="py-5">
+    <div class="container">
         <div class="my-5">
             <h2 class="text-center mb-4 fw-bold">Featured Landscape Projects</h2>
             <div class="row g-4">
@@ -120,7 +128,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<div class="py-5 bg-light">
+    <div class="container">
         <div class="row my-5">
             <div class="col-lg-6">
                 <h2 class="fw-bold mb-4">Our Design Philosophy</h2>
@@ -147,11 +159,14 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="https://i.pinimg.com/736x/5a/3e/8d/5a3e8d8f8b8c8b8c8b8c8b8c8b8c8b8c.jpg" alt="Our Design Philosophy" class="img-fluid rounded shadow-sm">
+                <img src="https://landscapesbyterra.com/img/asset/YXNzZXRzL2Jsb2cvY29udGVtcG9yYXJ5LWNhbG0xMS5qcGc=?h=1000&s=f2ade74b255a8d687762cfb815789c1b" alt="Our Design Philosophy" class="img-fluid rounded shadow-sm">
             </div>
         </div>
     </div>
 </div>
+
+{{-- include services here  --}}
+@include('frontend.components.services')
 
 
 {{-- include members here  --}}

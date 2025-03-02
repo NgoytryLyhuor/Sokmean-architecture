@@ -42,49 +42,55 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="row my-5">
-            <div class="col-12">
-                <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">01</div>
-                        <h3 class="card-title h5 fw-bold">Initial Consultation</h3>
-                        <p class="card-text">We discuss your needs, preferences, and project goals to establish the foundation of your floor plan.</p>
+<div class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">01</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Initial Consultation</h3>
+                        <p class="card-text text-muted">We discuss your needs, preferences, and project goals to establish the foundation of your floor plan.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">02</div>
-                        <h3 class="card-title h5 fw-bold">Concept Development</h3>
-                        <p class="card-text">We create preliminary sketches and layouts to visualize the space.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">02</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Concept Development</h3>
+                        <p class="card-text text-muted">We create preliminary sketches and layouts to visualize the space.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">03</div>
-                        <h3 class="card-title h5 fw-bold">Design Refinement</h3>
-                        <p class="card-text">We refine the layout based on your feedback, finalizing details and dimensions.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">03</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Design Refinement</h3>
+                        <p class="card-text text-muted">We refine the layout based on your feedback, finalizing details and dimensions.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="badge bg-primary rounded-circle p-3 mb-3 fs-4 fw-bold">04</div>
-                        <h3 class="card-title h5 fw-bold">Finalization</h3>
-                        <p class="card-text">We deliver the final floor plan, ready for implementation or construction.</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">04</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Finalization</h3>
+                        <p class="card-text text-muted">We deliver the final floor plan, ready for implementation or construction.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<div class="py-5">
+    <div class="container">
         <div class="my-5">
             <h2 class="text-center mb-4 fw-bold">Featured Floor Plan Projects</h2>
             <div class="row g-4">
@@ -120,7 +126,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<div class="py-5 bg-light">
+    <div class="container">
         <div class="row my-5">
             <div class="col-lg-6">
                 <h2 class="fw-bold mb-4">Our Design Philosophy</h2>
@@ -153,6 +163,8 @@
     </div>
 </div>
 
+{{-- include services here  --}}
+@include('frontend.components.services')
 
 {{-- include members here  --}}
 @include('frontend.components.members')
