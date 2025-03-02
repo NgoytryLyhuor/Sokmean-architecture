@@ -10,7 +10,11 @@
 <nav class="site-nav">
     <div class="container">
         <div class="site-navigation">
-            <a href="{{ route('index') }}" class="logo m-0 float-start">Norkor Architecture<span class="text-primary">.</span> </a>
+            {{-- <a href="{{ route('index') }}" class="logo m-0 float-start">Norkor Architecture<span class="text-primary">.</span> </a> --}}
+
+            <a href="{{ route('index') }}" class="logo m-0 float-start">
+                <img class="shadow-none" src="{{ asset('backend/assets/images/logo.png') }}" style="width: 70px;margin-top: -8px;" alt="">
+            </a>
 
             <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
                 <li class="{{ request()->routeIs('index') || request()->is('/') ? 'active' : '' }}">

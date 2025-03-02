@@ -22,9 +22,9 @@
     </div>
 </div>
 
-<div class="section sec-4">
+<div class="section sec-4 pb-0">
     <div class="container">
-        <div class="row border-bottom mb-5 pb-5 justify-content-between">
+        <div class="row mb-5 pb-5 justify-content-between">
             <div class="col-lg-4 align-self-center mb-5">
                 <span class="d-block subheading mb-3">We are committed</span>
                 <h2 class="heading mb-4">The road of success is always under construction</h2>
@@ -37,66 +37,12 @@
                 </a>
             </div>
         </div>
-        <div class="row g-5">
-            <div class="col-lg-6">
-
-                <div class="d-flex custom-card">
-                    <div class="img">
-                        <i class="flaticon-compass"></i>
-                    </div>
-                    <div class="text">
-                        <h3 class="h6 fw-bold text-black">Interior Design</h3>
-                        <p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
-                        <p>
-                            <a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="d-flex custom-card">
-                    <div class="img">
-                        <i class="flaticon-plan"></i>
-                    </div>
-                    <div class="text">
-                        <h3 class="h6 fw-bold text-black">Landscape Design</h3>
-                        <p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
-                        <p>
-                            <a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="d-flex custom-card">
-                    <div class="img">
-                        <i class="flaticon-color-palette"></i>
-                    </div>
-                    <div class="text">
-                        <h3 class="h6 fw-bold text-black">Architecture Design</h3>
-                        <p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
-                        <p>
-                            <a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="d-flex custom-card">
-                    <div class="img">
-                        <i class="flaticon-wall"></i>
-                    </div>
-                    <div class="text">
-                        <h3 class="h6 fw-bold text-black">Floor Plan</h3>
-                        <p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
-                        <p>
-                            <a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+</div>
+
+{{-- include services here  --}}
+<div class="bg-light">
+    @include('frontend.components.services')
 </div>
 
 <div class="section sec-team sec-4 pb-5">

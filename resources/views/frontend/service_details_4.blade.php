@@ -15,29 +15,29 @@
     </div>
 </div>
 
-<div class="py-5">
+<div class="py-5 bg-light">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <h2 class="mb-4 fw-bold">Efficient and Functional Layouts</h2>
-                <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b>, we understand that a well-designed floor plan is the foundation of any great space. Our floor plan services focus on creating layouts that maximize functionality, flow, and aesthetics, ensuring every square foot is utilized effectively.</p>
+                <p class="mb-3">At <b>Norkor Architecture<span class="text-primary">.</span></b> we understand that a well-designed floor plan is the foundation of any great space. Our floor plan services focus on creating layouts that maximize functionality, flow, and aesthetics, ensuring every square foot is utilized effectively.</p>
 
                 <p>Whether you're building a new home, renovating an existing space, or designing a commercial property, we create floor plans that align with your vision and lifestyle.</p>
             </div>
-            <div class="col-lg-4">
-                <div class="card shadow-sm">
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-sm">
                     <div class="card-body">
                         <h3 class="card-title h5 fw-bold mb-3">Our Floor Plan Services Include:</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent">Custom residential floor plans</li>
-                            <li class="list-group-item bg-transparent">Commercial space planning</li>
-                            <li class="list-group-item bg-transparent">Space optimization and zoning</li>
-                            <li class="list-group-item bg-transparent">Furniture layout and traffic flow analysis</li>
-                            <li class="list-group-item bg-transparent">2D and 3D floor plan visualizations</li>
-                            <li class="list-group-item bg-transparent">Renovation and remodeling plans</li>
-                            <li class="list-group-item bg-transparent">Accessibility and compliance planning</li>
-                            <li class="list-group-item bg-transparent">Integration with interior and exterior design</li>
-                        </ul>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0"><span class="fw-bold">1.</span> Custom residential floor plans</li>
+                            <li class="list-group-item bg-transparent ps-0"><span class="fw-bold">2.</span> Commercial space planning</li>
+                            <li class="list-group-item bg-transparent ps-0"><span class="fw-bold">3.</span> Space optimization and zoning</li>
+                            <li class="list-group-item bg-transparent ps-0"><span class="fw-bold">4.</span> Furniture layout and traffic flow analysis</li>
+                            <li class="list-group-item bg-transparent ps-0"><span class="fw-bold">5.</span> 2D and 3D floor plan visualizations</li>
+                            <li class="list-group-item bg-transparent ps-0"><span class="fw-bold">6.</span> Renovation and remodeling plans</li>
+                            <li class="list-group-item bg-transparent ps-0"><span class="fw-bold">7.</span> Accessibility and compliance planning</li>
+                            <li class="list-group-item bg-transparent ps-0"><span class="fw-bold">8.</span> Integration with interior and exterior design</li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -45,12 +45,12 @@
     </div>
 </div>
 
-<div class="py-5 bg-light">
+<div class="py-5">
     <div class="container">
         <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
         <div class="row g-4">
             <div class="col-lg-3 col-md-6">
-                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition-all py-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
                     <div class="card-body text-center p-4">
                         <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">01</div>
                         <h3 class="card-title h5 fw-bold mb-3">Initial Consultation</h3>
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition-all py-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
                     <div class="card-body text-center p-4">
                         <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">02</div>
                         <h3 class="card-title h5 fw-bold mb-3">Concept Development</h3>
@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition-all py-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
                     <div class="card-body text-center p-4">
                         <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">03</div>
                         <h3 class="card-title h5 fw-bold mb-3">Design Refinement</h3>
@@ -77,9 +77,27 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition-all py-4">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
                     <div class="card-body text-center p-4">
                         <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">04</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Finalization</h3>
+                        <p class="card-text text-muted">We deliver the final floor plan, ready for implementation or construction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">05</div>
+                        <h3 class="card-title h5 fw-bold mb-3">Finalization</h3>
+                        <p class="card-text text-muted">We deliver the final floor plan, ready for implementation or construction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm transition-all py-4">
+                    <div class="card-body text-center p-4">
+                        <div class="badge bg-primary rounded-circle p-3 mb-4 fs-4 fw-bold text-white">06</div>
                         <h3 class="card-title h5 fw-bold mb-3">Finalization</h3>
                         <p class="card-text text-muted">We deliver the final floor plan, ready for implementation or construction.</p>
                     </div>
@@ -89,7 +107,7 @@
     </div>
 </div>
 
-<div class="py-5">
+<div class="py-5 bg-light">
     <div class="container">
         <div class="my-5">
             <h2 class="text-center mb-4 fw-bold">Featured Floor Plan Projects</h2>
@@ -124,40 +142,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="py-5 bg-light">
-    <div class="container">
-        <div class="row my-5">
-            <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">Our Design Philosophy</h2>
-                <p>We believe that a great floor plan should:</p>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Maximize functionality and flow</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Reflect your lifestyle and needs</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Incorporate natural light and ventilation</p>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-check-circle-fill text-primary me-2 fs-4"></i>
-                    <p class="mb-0">Balance aesthetics and practicality</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://i.pinimg.com/736x/7c/a8/a4/7ca8a40ff1e12eca19466c38218c6dbb.jpg" alt="Our Design Philosophy" class="img-fluid rounded shadow-sm">
             </div>
         </div>
     </div>
