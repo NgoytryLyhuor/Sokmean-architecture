@@ -5,7 +5,7 @@
             <div class="col-lg-4">
                 <div class="widget">
                     <h3 class="line-top">About</h3>
-                    <p class="mb-5">At <b>Norkor Architecture.</b> we are passionate about creating exceptional architectural
+                    <p class="mb-5">At <b>Norkor Architecture<span class="text-danger">.</span></b> we are passionate about creating exceptional architectural
                         designs that inspire and transform the spaces where people live, work, and play. With a
                         commitment to innovation, creativity, and sustainability, our team of skilled architects,
                         designers, and planners work collaboratively with clients to bring their visions to life.
