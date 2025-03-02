@@ -8,6 +8,15 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
+use Illuminate\Support\Facades\Artisan;Route::get('/clear-cache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+
+    return "Cache cleared successfully!";
+});
 
 
 Route::get('/dashboard', function () {
@@ -98,7 +107,15 @@ Route::controller(ProjectController::class)->group(function () {
 
 
 
+Route::get('/clear', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
 
+    return "Cache cleared successfully!";
+});
 
 
 require __DIR__.'/auth.php';
