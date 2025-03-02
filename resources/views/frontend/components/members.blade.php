@@ -2,7 +2,7 @@
     $data = App\Models\Team::all();
 @endphp
 
-<div class="sec-4 section bg-light">
+<div class="sec-4 section">
     <div class="text-center mb-5">
         <h2 class="heading mb-5 text-center">Testimonial</h2>
     </div>

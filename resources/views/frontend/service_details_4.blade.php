@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<div class="py-5 bg-light">
+<div class="py-5">
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-7">
@@ -45,7 +45,7 @@
     </div>
 </div>
 
-<div class="py-5">
+<div class="py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-4 fw-bold">Our Design Process</h2>
         <div class="row g-4">
@@ -107,7 +107,7 @@
     </div>
 </div>
 
-<div class="py-5 bg-light">
+<div class="py-5">
     <div class="container">
         <div class="my-5">
             <h2 class="text-center mb-4 fw-bold">Featured Floor Plan Projects</h2>
@@ -147,8 +147,10 @@
     </div>
 </div>
 
-{{-- include services here  --}}
-@include('frontend.components.services')
+<div class="bg-light">
+    {{-- include services here  --}}
+    @include('frontend.components.services')
+</div>
 
 {{-- include members here  --}}
 @include('frontend.components.members')

@@ -43,7 +43,7 @@
             <div class="col-lg-3">
                 <h2 class="heading">{{ $section_two->title }}</h2>
                 <p>{{ $section_two->banner_title }}</p>
-                <p><a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a></p>
+                <p><a href="{{ asset('services') }}" class="more-2">More Details <span class="icon-arrow_forward"></span></a></p>
             </div>
             <div class="col-lg-7 ms-auto">
                 <img src="{{ asset('backend/assets/images/homePage/'.$section_two->banner) }}" alt="Image" class="img-fluid img-r">
@@ -61,7 +61,7 @@
             <div class="col-lg-3 ms-auto">
                 <h2 class="heading">{{ $section_three->title }}</h2>
                 <p>{{ $section_three->banner_title }}</p>
-                <p><a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a></p>
+                <p><a href="{{ asset('services') }}" class="more-2">More Details <span class="icon-arrow_forward"></span></a></p>
             </div>
         </div>
     </div>
@@ -101,7 +101,7 @@
                                         </div>
                                         <div class="col-md-8">
                                             <p>{{ $data->banner_title }}</p>
-                                            <a href="{{ asset('services') }}" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+                                            <a href="{{ asset('services') }}" class="more-2">More Details <span class="icon-arrow_forward"></span></a>
                                         </div>
                                     </div>
                                 </div>

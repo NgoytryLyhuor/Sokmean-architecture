@@ -16,8 +16,10 @@
 </div>
 
 
-{{-- include services here  --}}
-@include('frontend.components.services')
+<div class="bg-light">
+    {{-- include services here  --}}
+    @include('frontend.components.services')
+</div>
 
 
 {{-- include members here  --}}

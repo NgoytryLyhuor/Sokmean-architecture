@@ -38,7 +38,7 @@
                 <span></span>
             </a>
             <ul class="site-menu float-end d-none d-md-block">
-                <li><a href="#" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span> <span>+ 2 292 4392 327</span></a></li>
+                <li><a href="tel:+8551234567" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span> <span>+8551234567</span></a></li>
             </ul>
 
         </div>
