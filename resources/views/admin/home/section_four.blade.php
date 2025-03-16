@@ -138,7 +138,7 @@
                                                     <td>{{ $i++ }}</td>
                                                     <td>{{ $data->title }}</td>
                                                     <td>
-                                                        <img width="85px" src="{{ asset('backend/assets/images/homePage/' . $data->banner) }}" alt="">
+                                                        <img class=" my-no-shadow" width="85px" src="{{ asset('backend/assets/images/homePage/' . $data->banner) }}" alt="">
                                                     </td>
                                                     <td class="api-td api-none">
                                                         {{ $data->banner_title }}
@@ -200,7 +200,7 @@
 
                                                 <div class="row mb-3">
                                                     <label for="image" class="col-sm-2 col-form-label"></label>
-                                                    <img id="show_banner" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('no_image.jpg') }}">
+                                                    <img id="show_banner" class="card-img-top img-fluid my-no-shadow" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('no_image.jpg') }}">
                                                 </div>
 
                                             </div>
@@ -249,7 +249,7 @@
 
                                                 <div class="row mb-3">
                                                     <label for="image" class="col-sm-2 col-form-label"></label>
-                                                    <img id="edit_banner_preview" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('no_image.jpg') }}">
+                                                    <img id="edit_banner_preview" class="card-img-top img-fluid my-no-shadow" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('no_image.jpg') }}">
                                                 </div>
                                             </div>
                                             <div class="modal-footer">

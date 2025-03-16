@@ -105,7 +105,7 @@
                 </div>
 
                 {{-- Services Details --}}
-                <div class="col-xl-6">
+                <div class="col-xl-12">
                     <div class="card">
                         <div class="card-body">
                             <center class="mb-3">
@@ -143,7 +143,7 @@
                 </div>
 
                 {{-- Services Include --}}
-                <div class="col-xl-6">
+                <div class="col-xl-12">
                     <div class="card">
                         <div class="card-body">
                             <center class="mb-3">

@@ -68,7 +68,7 @@
                                             <td>{{ $i++ }}</td>
                                             <td>{{ $data->name }}</td>
                                             <td>
-                                                <img width="85px" src="{{ asset('backend/assets/images/team/' . $data->image) }}" alt="">
+                                                <img class=" my-no-shadow" width="85px" src="{{ asset('backend/assets/images/team/' . $data->image) }}" alt="">
                                             </td>
                                             <td>{{ $data->position }}</td>
                                             <td class="api-td api-none">{{ $data->description }}</td>
@@ -131,7 +131,7 @@
 
                                                 <div class="row mb-3">
                                                     <label for="image" class="col-sm-2 col-form-label"></label>
-                                                    <img id="show_banner" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('no_image.jpg') }}">
+                                                    <img id="show_banner" class="card-img-top img-fluid my-no-shadow" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('no_image.jpg') }}">
                                                 </div>
                                             </div>
 
@@ -188,7 +188,7 @@
 
                                                 <div class="row mb-3">
                                                     <label class="col-sm-2 col-form-label"></label>
-                                                    <img id="show_banner_edit" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important; height:160px !important;" src="{{ asset('no_image.jpg') }}">
+                                                    <img id="show_banner_edit" class="card-img-top img-fluid my-no-shadow" style="object-fit:cover; width: 370px !important; height:160px !important;" src="{{ asset('no_image.jpg') }}">
                                                 </div>
                                             </div>
 

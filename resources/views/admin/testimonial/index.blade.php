@@ -68,7 +68,7 @@
                                             <td>{{ $i++ }}</td>
                                             <td>{{ $data->name }}</td>
                                             <td>
-                                                <img width="85px" src="{{ asset('backend/assets/images/testimonial/' . $data->image) }}" alt="">
+                                                <img class=" my-no-shadow" width="85px" src="{{ asset('backend/assets/images/testimonial/' . $data->image) }}" alt="">
                                             </td>
                                             <td>{{ $data->position }}</td>
                                             <td class="api-td api-none">{{ $data->description }}</td>

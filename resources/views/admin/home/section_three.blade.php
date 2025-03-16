@@ -63,7 +63,7 @@
 
                                 <div class="row mb-3">
                                     <label for="image" class="col-sm-2 col-form-label"></label>
-                                    <img id="show_banner" class="card-img-top img-fluid" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('backend/assets/images/homePage/' . $data->banner) }}" alt="{{ $data->banner }}">
+                                    <img id="show_banner" class="card-img-top img-fluid my-no-shadow" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('backend/assets/images/homePage/' . $data->banner) }}" alt="{{ $data->banner }}">
                                 </div>
 
                                 <div class="row mb-3">

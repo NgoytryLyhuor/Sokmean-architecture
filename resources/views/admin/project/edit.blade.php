@@ -315,7 +315,7 @@
             $("#project_path").hide()
             $("#toggle_project_path").click(function() {
                 var isVisible = $("#project_path").is(":visible");
-                $("#project_path").slideToggle(400);
+                $("#project_path").slideToggle(150);
 
                 var buttonText = $(this).text().trim();
                 if (isVisible) {
@@ -325,7 +325,7 @@
 
                     $('html, body').animate({
                         scrollTop: $("#project_path").offset().top - 180
-                    }, 400);
+                    }, 150);
                 }
             });
 
