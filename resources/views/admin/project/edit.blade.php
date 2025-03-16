@@ -86,7 +86,7 @@
 
                                 <div class="row mb-3">
                                     <label class="col-sm-12 col-form-label"></label>
-                                    <img id="show_image_1" class="card-img-top img-fluid"
+                                    <img id="show_image_1" class="card-img-top img-fluid my-no-shadow"
                                         style="object-fit:cover; width: 370px !important;height:160px !important;"
                                         src="{{ asset('backend/assets/images/project/' . $project->cover) }}">
                                 </div>
@@ -128,7 +128,7 @@
                                             <td>{{ $data->title }}</td>
                                             <td class="api-td api-none">{{ $data->description }}</td>
                                             <td>
-                                                <img width="85px"
+                                                <img width="85px" class="my-no-shadow"
                                                     src="{{ asset('backend/assets/images/project/' . $data->cover) }}"
                                                     alt="">
                                             </td>
@@ -194,7 +194,7 @@
 
                                 <div class="row mb-3">
                                     <label class="col-sm-12 col-form-label"></label>
-                                    <img id="show_image_2" class="card-img-top img-fluid"
+                                    <img id="show_image_2" class="card-img-top img-fluid my-no-shadow"
                                         style="object-fit:cover; width: 370px !important;height:160px !important;"
                                         src="{{ asset('no_image.jpg') }}">
                                 </div>
@@ -224,7 +224,6 @@
                         <form id="update_project_path" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="id" id="edit_id">
-                            <input type="hidden" name="project_id" id="edit_project_id" value="{{ $project->id }}">
 
                             <div class="modal-body">
                                 <div class="row mb-3">
@@ -250,7 +249,7 @@
 
                                 <div class="row mb-3">
                                     <label for="image" class="col-sm-2 col-form-label"></label>
-                                    <img id="edit_cover_show" class="card-img-top img-fluid"
+                                    <img id="edit_cover_show" class="card-img-top img-fluid my-no-shadow"
                                         style="object-fit:cover; width: 370px !important; height:160px !important;"
                                         src="{{ asset('no_image.jpg') }}">
                                 </div>
@@ -325,7 +324,7 @@
                     $(this).html('Hide Insert Area <i class="ri-eye-off-line align-middle ms-2"></i>');
 
                     $('html, body').animate({
-                        scrollTop: $("#project_path").offset().top
+                        scrollTop: $("#project_path").offset().top - 180
                     }, 400);
                 }
             });

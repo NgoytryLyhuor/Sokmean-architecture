@@ -8,12 +8,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Projects</h4>
+                        <h4 class="mb-sm-0">Services</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
-                                <li class="breadcrumb-item active">All Projects</li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Services</a></li>
+                                <li class="breadcrumb-item active">All Services</li>
                             </ol>
                         </div>
 
@@ -46,7 +46,7 @@
 
 
                             <div class="d-flex justify-content-end mb-3">
-                                <a href="{{ route('project-pages.insert') }}" class="api-width text-white">
+                                <a href="{{ route('service-pages.insert') }}" class="api-width text-white">
                                     <button type="button" class="btn btn-warning waves-effect waves-light p-1 px-3 api-width" data-bs-toggle="modal" data-bs-target="#insertModal">
                                         Insert<i class=" ri-add-fill align-middle ms-2"></i>
                                     </button>
@@ -65,16 +65,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($project_data as $data)
+                                    @foreach($service_data as $data)
                                         <tr class="odd" id="team-{{ $data->id }}">
                                             <td>{{ $i++ }}</td>
-                                            <td>{{ $data->title }}</td>
+                                            <td>{{ $data->main_title }}</td>
                                             <td>
-                                                <img class="my-no-shadow" width="85px" src="{{ asset('backend/assets/images/project/' . $data->cover) }}" alt="">
+                                                <img class="my-no-shadow object-cover" width="85px" height="85px" src="{{ asset('backend/assets/images/service/' . $data->banner) }}" alt="">
                                             </td>
-                                            <td class="api-td api-none">{!! $data->description !!}</td>
+                                            <td class="api-td api-none">{!! $data->banner_description !!}</td>
                                             <td>
-                                                <a href="{{ route('project-pages.edit',$data->id) }}">
+                                                <a href="{{ route('service-pages.edit',$data->id) }}">
                                                     <button type="button" class="btn btn-info waves-effect waves-light p-1 px-2">
                                                         Edit
                                                     </button>
@@ -120,19 +120,18 @@
         $(document).ready(function(){
 
             $('#deleteBtn').on('click', function () {
-                var id = $(this).data('id'); // Get the ID of the item to delete
+                var id = $(this).data('id');
 
-                // AJAX request to delete the item
                 $.ajax({
-                    url: "{{ route('project-pages.delete') }}", // Your route for deletion
+                    url: "{{ route('service-pages.delete') }}",
                     type: 'DELETE',
                     data: {
                         id: id,
-                        _token: "{{ csrf_token() }}", // CSRF token for security
+                        _token: "{{ csrf_token() }}",
                     },
                     success: function(response) {
                         if (response.success) {
-                            location.reload(); // Refresh the page
+                            location.reload();
                         } else {
                             alert('Failed to delete. Please try again.');
                         }
@@ -146,8 +145,7 @@
         });
 
         function loadDeleteData(id) {
-            // Set the ID of the item to be deleted
-            $('#deleteBtn').data('id', id); // Store the ID in the button for easy access
+            $('#deleteBtn').data('id', id);
         }
 
     </script>

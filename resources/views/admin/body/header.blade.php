@@ -3,23 +3,15 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="{{ asset('backend/assets/images/logo-dark.png') }}" alt="logo-dark" height="20">
-                    </span>
-                </a>
 
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
+                        <img class="my-no-shadow" src="{{ asset('backend/assets/images/logo.png') }}" alt="logo-light" height="30" style="margin-left: -12px;">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="logo-light" height="20">
+                        <img class="my-no-shadow" src="{{ asset('backend/assets/images/logo.png') }}" alt="logo-light" height="30" style="margin-left: -17px;margin-top: -7px;">
+                        <span class="text-white" style="font-size: 18px;margin-left: 5px;">Norkor Architecture</span>
                     </span>
-
                 </a>
 
             </div>
@@ -40,7 +32,8 @@
                 </button>
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img style="object-fit: cover;" class="rounded-circle header-profile-user" src="{{ (!empty($adminData->profile_image))? url('upload/admin_images/'.$adminData->profile_image): url('no_image.jpg') }}"
+                    <img style="object-fit: cover;" class="rounded-circle header-profile-user"
+                        src="{{ !empty($adminData->profile_image) ? url('upload/admin_images/' . $adminData->profile_image) : url('no_image.jpg') }}"
                         alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1">{{ $adminData->name }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
@@ -52,7 +45,8 @@
                     <div class="dropdown-divider"></div>
                     <form action="{{ route('logout') }}" method="POST" class="d-inline">
                         @csrf
-                        <button type="submit" class="dropdown-item text-danger" style="background: none; border: none; cursor: pointer;">
+                        <button type="submit" class="dropdown-item text-danger"
+                            style="background: none; border: none; cursor: pointer;">
                             <i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout
                         </button>
                     </form>

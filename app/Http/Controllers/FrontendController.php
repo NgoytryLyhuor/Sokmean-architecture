@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Models\ProjectPath;
+use App\Models\Service;
+use App\Models\ServiceDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class FrontendController extends Controller
 {
@@ -17,29 +21,57 @@ class FrontendController extends Controller
         return view('auth.login');
     }
 
-    public function services(){
-        return view('frontend.services');
+    public function services()
+    {
+        $services = [
+            'interiorDesign' => Service::where('id', 10)->first(),
+            'landscapeDesign' => Service::where('id', 11)->first(),
+            'architectureDesign' => Service::where('id', 12)->first(),
+            'floorPlan' => Service::where('id', 13)->first()
+        ];
+
+        return view('frontend.services', $services);
     }
 
-    public function service_details($slug){
+    public function service_details($slug)
+    {
+        // Preset services for inclusion
+        $services = [
+            'interiorDesign' => Service::find(10),
+            'landscapeDesign' => Service::find(11),
+            'architectureDesign' => Service::find(12),
+            'floorPlan' => Service::find(13)
+        ];
 
-        if($slug === 'interior-design'){
-            return view('frontend.service_details_1');
-        }
-        if($slug === 'landscape-design'){
-            return view('frontend.service_details_2');
-        }
-        if($slug === 'architecture-design'){
-            return view('frontend.service_details_3');
-        }
-        if($slug === 'floor-plan'){
-            return view('frontend.service_details_4');
+        // Find the specific service based on the slug
+        $service = Service::whereRaw("LOWER(REPLACE(main_title, ' ', '-')) = ?", [$slug])->first();
+
+        if (!$service) {
+            abort(404);
         }
 
+        // Get the related service details
+        $serviceDetails = ServiceDetail::where('service_id', $service->id)->get();
+
+        // Merge the new variables with the existing services array
+        $data = array_merge($services, [
+            'service' => $service,
+            'serviceDetails' => $serviceDetails
+        ]);
+
+        return view('frontend.service_details', $data);
     }
 
     public function about(){
-        return view('frontend.about');
+
+        $services = [
+            'interiorDesign' => Service::where('id', 10)->first(),
+            'landscapeDesign' => Service::where('id', 11)->first(),
+            'architectureDesign' => Service::where('id', 12)->first(),
+            'floorPlan' => Service::where('id', 13)->first()
+        ];
+
+        return view('frontend.about',$services);
     }
 
     public function contact(){
@@ -47,7 +79,15 @@ class FrontendController extends Controller
     }
 
     public function project(){
-        return view('frontend.projects');
+
+        $services = [
+            'interiorDesign' => Service::where('id', 10)->first(),
+            'landscapeDesign' => Service::where('id', 11)->first(),
+            'architectureDesign' => Service::where('id', 12)->first(),
+            'floorPlan' => Service::where('id', 13)->first()
+        ];
+
+        return view('frontend.projects',$services);
     }
 
     public function project_details($slug) {

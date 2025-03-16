@@ -17,6 +17,10 @@ img{
     white-space: normal !important;
 }
 
+.api-logo{
+    margin-top: -15px;
+}
+
 .circle {
     display: block; /* Changed from 'none' to 'block' to make it visible */
     width: 50px;
@@ -83,6 +87,11 @@ img{
     box-shadow: none !important;
 }
 
+.my-td-normal {
+    white-space: normal !important;
+}
+
+
 
 
 
@@ -106,5 +115,24 @@ img{
     .api-none{
         display: none !important;
     }
+
+    .my-td-normal {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Show only 1 line */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal !important;
+        padding-bottom: 0px !important;
+        padding-top: 6px !important;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .api-logo{
+        margin-top: -10px;
+    }
+
 }
 

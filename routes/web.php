@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Artisan;Route::get('/clear-cache', function () {
@@ -103,6 +104,35 @@ Route::controller(ProjectController::class)->group(function () {
 
     Route::delete('/project-pages/delete/project', 'destroy')->name('project-pages.delete');
     Route::delete('/project-pages/delete/project-path', 'destroyProjectPath')->name('project-pages.deleteProjectPath');
+});
+
+
+// backend service page
+Route::controller(ServiceController::class)->group(function () {
+
+    Route::get('/service-pages', 'index')->name('service-pages.index');
+
+    Route::get('/service-insert-pages', 'insert')->name('service-pages.insert');
+    Route::post('/service-pages/insert', 'insertCover')->name('service-pages.insertCover');
+    Route::post('/service-pages/update/{id}', 'updateCover')->name('service-pages.updateCover');
+    Route::get('/service-pages/edit/{id}', 'edit')->name('service-pages.edit');
+    Route::delete('/service-pages/delete', 'delete')->name('service-pages.delete');
+
+    Route::post('/service-pages/insert-service-details', 'insertServiceDetails')->name('service-pages.insertServiceDetails');
+    Route::get('/service-pages/edit-service-details/{id}', 'editServiceDetails')->name('service-pages.editServiceDetails');
+    Route::POST('/service-pages/update-service-details', 'updateServiceDetails')->name('service-pages.updateServiceDetails');
+    Route::delete('/service-pages/delete-service-details', 'deleteServiceDetails')->name('service-pages.deleteServiceDetails');
+
+    Route::post('/service-pages/insert-process', 'insertProcess')->name('service-pages.insertProcess');
+    Route::get('/service-pages/edit-process/{id}', 'editProcess')->name('service-pages.editProcess');
+    Route::POST('/service-pages/update-process', 'updateProcess')->name('service-pages.updateProcess');
+    Route::delete('/service-pages/delete-process', 'deleteProcess')->name('service-pages.deleteProcess');
+
+    Route::post('/service-pages/insert-sample-project', 'insertSampleProject')->name('service-pages.insertSampleProject');
+    Route::get('/service-pages/edit-sample-project/{id}', 'editSampleProject')->name('service-pages.editSampleProject');
+    Route::POST('/service-pages/update-sample-project', 'updateSampleProject')->name('service-pages.updateSampleProject');
+    Route::delete('/service-pages/delete-sample-project', 'deleteSampleProject')->name('service-pages.deleteSampleProject');
+
 });
 
 

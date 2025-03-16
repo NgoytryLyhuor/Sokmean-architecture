@@ -1,19 +1,20 @@
 @extends('frontend.admin_master')
 @section('frontend')
 
-<div class="hero-2 overlay" style="background-image: url('https://i.pinimg.com/736x/c5/44/2e/c5442e1bfabf27ba81beedd87ba44692.jpg');">
+<div class="hero-2 overlay" style="background-image: url('{{ asset('backend/assets/images/service/'.$service->banner) }}');">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-5 mx-auto ">
-                <h1 class="mb-5 text-center"><span>Floor Plan</span></h1>
+            <div class="col-lg-5 mx-auto">
+                <h1 class="mb-5 text-center"><span>{{ $service->main_title }}</span></h1>
                 <div class="intro-desc text-left">
                     <div class="line"></div>
-                    <p>Optimizing spaces for functionality and flow.</p>
+                    <p>{{ $service->banner_description }}</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="py-5">
     <div class="container">

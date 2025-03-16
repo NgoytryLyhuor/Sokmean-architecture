@@ -76,11 +76,24 @@
                 </li>
 
                 <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-file-text-line"></i>
+                        <span>Services</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('service-pages.index') }}">All Services</a></li>
+                        <li><a href="{{ route('service-pages.insert') }}">Insert New Service</a></li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="{{ route('about-pages.index') }}" class="waves-effect">
                         <i class="ri-team-line"></i>
                         <span>About Page</span>
                     </a>
                 </li>
+
+
 
             </ul>
 

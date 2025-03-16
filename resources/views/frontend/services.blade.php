@@ -18,7 +18,12 @@
 
 <div class="bg-light">
     {{-- include services here  --}}
-    @include('frontend.components.services')
+    @include('frontend.components.services', [
+        'interiorDesign' => $interiorDesign,
+        'landscapeDesign' => $landscapeDesign,
+        'architectureDesign' => $architectureDesign,
+        'floorPlan' => $floorPlan
+    ])
 </div>
 
 
