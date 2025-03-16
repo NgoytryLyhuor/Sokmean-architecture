@@ -91,6 +91,18 @@ img{
     white-space: normal !important;
 }
 
+.my-img-hover {
+    overflow: hidden;
+}
+
+.my-img-hover img {
+    transition: transform 0.3s ease;
+}
+
+.my-img-hover img:hover {
+    transform: scale(1.1);
+}
+
 
 
 

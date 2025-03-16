@@ -51,12 +51,16 @@ class FrontendController extends Controller
         }
 
         // Get the related service details
-        $serviceDetails = ServiceDetail::where('service_id', $service->id)->get();
+        $serviceServiceInclude = ServiceDetail::where('service_id', $service->id)->where('type','service_include')->get();
+        $serviceProcess = ServiceDetail::where('service_id', $service->id)->where('type','process')->get();
+        $serviceSampleProject = ServiceDetail::where('service_id', $service->id)->where('type','sample_project')->get();
 
         // Merge the new variables with the existing services array
         $data = array_merge($services, [
             'service' => $service,
-            'serviceDetails' => $serviceDetails
+            'serviceServiceInclude' => $serviceServiceInclude,
+            'serviceProcess' => $serviceProcess,
+            'serviceSampleProject' => $serviceSampleProject
         ]);
 
         return view('frontend.service_details', $data);
