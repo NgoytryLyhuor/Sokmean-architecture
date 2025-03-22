@@ -1,6 +1,6 @@
 @php
     $about = App\Models\About::FindOrFail(1);
-    $contact = App\Models\COntact::FindOrFail(1);
+    $contact = App\Models\Contact::FindOrFail(1);
 @endphp
 
 <div class="site-footer bg-light">
