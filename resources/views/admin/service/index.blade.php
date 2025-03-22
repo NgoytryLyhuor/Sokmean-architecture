@@ -70,7 +70,7 @@
                                             <td>{{ $i++ }}</td>
                                             <td>{{ $data->main_title }}</td>
                                             <td>
-                                                <img class="my-no-shadow object-cover" width="85px" height="85px" src="{{ asset('backend/assets/images/service/' . $data->banner) }}" alt="">
+                                                <img class="my-no-shadow" style="object-fit: cover" width="85px" height="85px" src="{{ asset('backend/assets/images/service/' . $data->banner) }}" alt="">
                                             </td>
                                             <td class="api-td api-none">{!! $data->banner_description !!}</td>
                                             <td>
