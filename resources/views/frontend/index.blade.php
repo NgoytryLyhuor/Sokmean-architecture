@@ -8,9 +8,10 @@
     $section_three = App\Models\HomePage::where('id',3)->first();
     $section_four = App\Models\HomePage::where('id',4)->first();
     $section_four_items = App\Models\HomePage::whereNotIn('id', [1, 2, 3, 4])->get();
-    $number = 1;
-
+    $services = App\Models\Service::whereIn('id',[10,11,12,13])->get();
     $project = App\Models\Project::orderBy('id','asc')->Limit(6)->whereNot('id',1)->get();
+
+    $number = 1;
 
 @endphp
 
@@ -78,16 +79,11 @@
             <div class="col-lg-6 ms-auto">
                 <div class="accordion accordion-flush accordion-1" id="accordionFlushExample">
 
-                    @foreach($section_four_items as $data)
+                    @foreach($services as $data)
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne-{{ $number }}">
-                                <button class="accordion-button {{ $number > 1 ? 'collapsed' : '' }}"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne-{{ $number }}"
-                                    aria-expanded="{{ $number == 1 ? 'true' : 'false' }}"
-                                    aria-controls="flush-collapseOne-{{ $number }}">
-                                    {{ $data->title }}
+                                <button class="accordion-button {{ $number > 1 ? 'collapsed' : '' }}" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-{{ $number }}" aria-expanded="{{ $number == 1 ? 'true' : 'false' }}" aria-controls="flush-collapseOne-{{ $number }}">
+                                    {{ $data->main_title }}
                                 </button>
                             </h2>
                             <div id="flush-collapseOne-{{ $number }}"
@@ -97,10 +93,10 @@
                                 <div class="accordion-body">
                                     <div class="row justify-content-between">
                                         <div class="col-md-4">
-                                            <img src="{{ asset('backend/assets/images/homePage/' . $data->banner) }}" alt="Image" class="img-fluid">
+                                            <img src="{{ asset('backend/assets/images/service/' . $data->banner) }}" alt="Image" class="img-fluid">
                                         </div>
                                         <div class="col-md-8">
-                                            <p>{{ $data->banner_title }}</p>
+                                            <p>{{ $data->banner_description }}</p>
                                             <a href="{{ asset('services') }}" class="more-2">More Details <span class="icon-arrow_forward"></span></a>
                                         </div>
                                     </div>

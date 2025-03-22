@@ -61,7 +61,7 @@
                                 <span id="danger-message"></span>
                             </div>
 
-                            <!-- Nav tabs -->
+                            {{-- <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link" data-bs-toggle="tab" href="#description" role="tab" aria-selected="true">
@@ -75,11 +75,11 @@
                                         <span class="d-none d-sm-block">Drop down details <i class=" ri-file-paper-2-line"></i></span>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> --}}
 
-                            <!-- Tab panes -->
+                            {{-- <!-- Tab panes -->
                             <div class="tab-content p-3 text-muted">
-                                <div class="tab-pane" id="description" role="tabpanel">
+                                <div class="tab-pane" id="description" role="tabpanel"> --}}
                                     <div class="row mt-3">
                                         <div class="col-12">
                                             <form id="updateSectionFourForm" enctype="multipart/form-data">
@@ -111,7 +111,7 @@
 
                                         </div>
                                     </div>
-                                </div>
+                                {{-- </div>
                                 <div class="tab-pane active" id="profile" role="tabpanel">
 
                                     <div class="d-flex justify-content-end mb-3">
@@ -276,7 +276,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
 
                         </div>

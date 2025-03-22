@@ -50,9 +50,9 @@
                 </div>
             @endforeach
 
-            <div class="col-md-12 text-center mt-5">
+            {{-- <div class="col-md-12 text-center mt-5">
                 <p><a href="#" class="btn btn-primary me-4">See all projects</a></p>
-            </div>
+            </div> --}}
 
         </div>
     </div>

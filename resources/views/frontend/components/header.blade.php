@@ -1,3 +1,6 @@
+@php
+    $contact = App\Models\Contact::FindOrFail(1);
+@endphp
 <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
@@ -38,7 +41,7 @@
                 <span></span>
             </a>
             <ul class="site-menu float-end d-none d-md-block">
-                <li><a href="tel:+8551234567" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span> <span>+8551234567</span></a></li>
+                <li><a href="tel:{{ $contact->phone }}" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span> <span>{{ $contact->phone }}</span></a></li>
             </ul>
 
         </div>
