@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Project;
 use App\Models\ProjectPath;
+use App\Models\QuestionAnswer;
 use App\Models\Service;
 use App\Models\ServiceDetail;
 use Illuminate\Http\Request;
@@ -15,10 +17,6 @@ class FrontendController extends Controller
 
     public function index(){
         return view('frontend.index');
-    }
-
-    public function return(){
-        return view('auth.login');
     }
 
     public function services()
@@ -79,7 +77,13 @@ class FrontendController extends Controller
     }
 
     public function contact(){
-        return view('frontend.contact');
+
+        $data = [
+            'contact' => Contact::find(1),
+            'qa' => QuestionAnswer::orderBy('id','asc')->get()
+        ];
+
+        return view('frontend.contact',$data);
     }
 
     public function project(){

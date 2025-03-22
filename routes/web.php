@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
@@ -34,12 +36,7 @@ Route::middleware('auth')->group(function () {
 Route::controller(FrontendController::class)->group(function(){
     Route::get('/','index')->name('index');
     Route::get('/services','services')->name('services');
-    Route::get('/return','return')->name('return');
-
     Route::get('/service-details/{slug}','service_details')->name('service_details');
-
-
-
     Route::get('/about','about')->name('about');
     Route::get('/contact','contact')->name('contact');
     Route::get('/projects','project')->name('project');
@@ -133,6 +130,23 @@ Route::controller(ServiceController::class)->group(function () {
     Route::POST('/service-pages/update-sample-project', 'updateSampleProject')->name('service-pages.updateSampleProject');
     Route::delete('/service-pages/delete-sample-project', 'deleteSampleProject')->name('service-pages.deleteSampleProject');
 
+});
+
+
+// contact_us page
+Route::controller(ContactUsController::class)->group(function () {
+    Route::get('/contact-us-pages', 'index')->name('contact-us-pages.index');
+    Route::post('/contact-us-pages/update/header/{id}', 'updateHeader')->name('contact-us-pages.update_header');
+    Route::post('/contact-us-pages/update/social/{id}', 'updateSocial')->name('contact-us-pages.update_social');
+    Route::delete('/contact-us-pages/delete/{id}', 'destroy')->name('contact-us-pages.delete');
+});
+
+// question_answer page
+Route::controller(QuestionAnswerController::class)->group(function () {
+    Route::post('/question-answer/insert', 'store')->name('question-answer.store');
+    Route::get('/question-answer/edit', 'edit')->name('question-answer.edit');
+    Route::put('/question-answer/update/{id}', 'update')->name('question-answer.update');
+    Route::delete('/question-answer/delete/{id}', 'destroy')->name('question-answer.delete');
 });
 
 

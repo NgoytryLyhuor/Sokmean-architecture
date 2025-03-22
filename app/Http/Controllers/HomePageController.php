@@ -102,10 +102,7 @@ class HomePageController extends Controller
 
         // Handle Banner Image Upload (if provided)
         if ($request->hasFile('banner')) {
-            // Define the correct path
             $oldBannerPath = public_path('backend/assets/images/homePage/' . $homePage->banner);
-
-            // Delete old banner if it exists
             if ($homePage->banner && file_exists($oldBannerPath)) {
                 unlink($oldBannerPath);
             }

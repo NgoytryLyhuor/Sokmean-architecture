@@ -251,23 +251,27 @@
 
             $('#deleteBtn').on('click', function() {
                 var id = $(this).data('id');
+                console.log('Deleting ID:', id); // Enhanced logging
+
                 $.ajax({
-                    url: "{{ route('testimonial-pages.delete', ['id' => ':id']) }}".replace(':id', id),
+                    url: "{{ route('question-answer.delete', ['id' => ':id']) }}".replace(':id', id),
                     type: 'DELETE',
                     data: {
                         _token: "{{ csrf_token() }}"
                     },
+                    headers: {
+                        'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                    },
                     success: function(response) {
+                        console.log('Success:', response);
                         if (response.message) {
-                            // Hide the modal if needed
-                            $('.bs-example-modal-center').modal('hide');
-
-                            // Reload the page to display the session success message
-                            location.reload();
+                            // location.reload();
+                            alert('Record deleted successfully');
                         }
                     },
                     error: function(xhr, status, error) {
-                        alert('An error occurred while deleting the record.');
+                        console.error('Error details:', xhr.responseText);
+                        alert('An error occurred while deleting the record: ' + error);
                     }
                 });
             });

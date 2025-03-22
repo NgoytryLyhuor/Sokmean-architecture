@@ -1,5 +1,6 @@
 @php
     $about = App\Models\About::FindOrFail(1);
+    $contact = App\Models\COntact::FindOrFail(1);
 @endphp
 
 <div class="site-footer bg-light">
@@ -15,11 +16,15 @@
                 <div class="widget">
                     <h3 class="line-top">Connect with us</h3>
                     <ul class="social list-unstyled mb-5">
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li><a href="#"><span class="icon-instagram"></span></a></li>
-                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                        <li><a href="#"><span class="icon-telegram"></span></a></li>
+                        @if($contact->social && is_array($contact->social))
+                            @foreach($contact->social as $social)
+                                <li>
+                                    <a href="{{ $social['url'] }}" target="_blank">
+                                        <span class="icon-{{ strtolower($social['name']) }}"></span>
+                                    </a>
+                                </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
             </div>

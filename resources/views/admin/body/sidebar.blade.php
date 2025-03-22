@@ -93,6 +93,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{ route('contact-us-pages.index') }}" class="waves-effect">
+                        <i class="ri-team-line"></i>
+                        <span>Contact Us Page</span>
+                    </a>
+                </li>
+
 
 
             </ul>
