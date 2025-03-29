@@ -58,8 +58,8 @@
     </div>
 </div>
 
-{{-- include members here  --}}
-@include('frontend.components.members')
+{{-- include testimonial here  --}}
+@include('frontend.components.testimonial')
 
 <div class="section bg-light">
     <div class="container">

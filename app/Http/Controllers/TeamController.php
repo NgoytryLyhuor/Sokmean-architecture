@@ -26,6 +26,9 @@ class TeamController extends Controller
             'position' => 'required|string|max:255',
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:50000',
+            'social' => 'nullable|array',
+            'social.*.name' => 'nullable|string|max:255',
+            'social.*.url' => 'nullable|url|max:255',
         ]);
 
         $team = new Team();
@@ -36,6 +39,21 @@ class TeamController extends Controller
             $request->file('image')->move(public_path('backend/assets/images/team/'), $imageName);
             $team->image = $imageName;
         }
+
+        $socialLinks = [];
+        if ($request->has('social')) {
+            foreach ($request->social as $social) {
+                if (!empty($social['name']) && !empty($social['url'])) {
+                    $socialLinks[] = [
+                        'name' => $social['name'],
+                        'url' => $social['url'],
+                    ];
+                }
+            }
+        }
+
+        // Convert the array to JSON before saving
+        $team->social = !empty($socialLinks) ? json_encode($socialLinks) : null;
 
         // Assign other fields
         $team->name = $request->name;
@@ -56,6 +74,13 @@ class TeamController extends Controller
         $data = Team::find($id); // Fetch the record by ID
 
         if ($data) {
+            // Decode the JSON stored in the social field
+            if ($data->social) {
+                $data->social = json_decode($data->social, true);
+            } else {
+                $data->social = [];
+            }
+
             return response()->json([
                 'status' => 'success',
                 'data' => $data
@@ -82,6 +107,9 @@ class TeamController extends Controller
             'position' => 'required|string|max:255',
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:50000',
+            'social' => 'nullable|array',
+            'social.*.name' => 'nullable|string|max:255',
+            'social.*.url' => 'nullable|url|max:255',
         ]);
 
         // Handle Image Upload
@@ -96,6 +124,20 @@ class TeamController extends Controller
             $request->file('image')->move(public_path('backend/assets/images/team/'), $imageName);
             $team->image = $imageName;
         }
+
+        $socialLinks = [];
+        if ($request->has('social')) {
+            foreach ($request->social as $social) {
+                if (!empty($social['name']) && !empty($social['url'])) {
+                    $socialLinks[] = [
+                        'name' => $social['name'],
+                        'url' => $social['url'],
+                    ];
+                }
+            }
+        }
+
+        $team->social = !empty($socialLinks) ? $socialLinks : null;
 
         // Update fields
         $team->name = $request->name;

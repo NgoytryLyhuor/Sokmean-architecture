@@ -27,11 +27,11 @@
 </div>
 
 
-{{-- include members here  --}}
-@include('frontend.components.members')
+{{-- include testimonial here  --}}
+@include('frontend.components.testimonial')
 
 
-{{-- include members here  --}}
+{{-- include news here  --}}
 @include('frontend.components.news')
 
 

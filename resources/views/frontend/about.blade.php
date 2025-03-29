@@ -64,10 +64,22 @@
                         <span class="d-block text-black-50 mb-3">{{ $data->position }}</span>
                         <p class="text-black-50">{{ $data->description }}</p>
                         <ul class="social-2 list-unstyled d-flex justify-content-center gap-2 mb-5">
-                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                            <li><a href="#"><span class="icon-telegram"></span></a></li>
+                            @php
+                                $socialLinks = json_decode($data->social, true);
+                            @endphp
+
+                            @if(!empty($socialLinks) && is_array($socialLinks))
+                                @foreach($socialLinks as $social)
+                                    @if(isset($social['url']) && isset($social['name']))
+                                        <li>
+                                            <a href="{{ e($social['url']) }}">
+                                                <span class="icon-{{ e(strtolower($social['name'])) }}"></span>
+                                            </a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endif
+
                         </ul>
                     </div>
                 </div>

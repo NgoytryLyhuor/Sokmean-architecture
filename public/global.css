@@ -148,3 +148,35 @@ img{
 
 }
 
+.text-truncate{
+    font-weight: 700;
+}
+
+.hover-animate {
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.hover-animate::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #0f9cf3; /* Bootstrap primary color - change as needed */
+    transition: width 0.5s ease;
+}
+
+.hover-animate:hover::after {
+    width: 100%;
+}
+
+/* Optional: Add some hover effects to the card itself */
+.hover-animate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+}
+

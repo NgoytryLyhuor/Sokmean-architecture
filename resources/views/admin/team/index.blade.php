@@ -133,6 +133,38 @@
                                                     <label for="image" class="col-sm-2 col-form-label"></label>
                                                     <img id="show_banner" class="card-img-top img-fluid my-no-shadow" style="object-fit:cover; width: 370px !important;height:160px !important;" src="{{ asset('no_image.jpg') }}">
                                                 </div>
+
+                                                <!-- Social Media Links -->
+                                                <div class="col-12 mt-4">
+                                                    <h5 class="fw-semibold mb-3">Social Media</h5>
+                                                    <div id="social-links-container" class="bg-light p-3 rounded">
+                                                        <div class="social-link-row p-2 bg-white rounded shadow-sm mb-3">
+                                                            <div class="row g-2 align-items-center">
+                                                                <div class="col-md-5">
+                                                                    <select name="social[0][name]" class="form-select form-select-sm">
+                                                                        <option value="Facebook">Facebook</option>
+                                                                        <option value="Telegram">Telegram</option>
+                                                                        <option value="Twitter">Twitter</option>
+                                                                        <option value="LinkedIn">LinkedIn</option>
+                                                                        <option value="Instagram">Instagram</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <input type="text" name="social[0][url]" class="form-control form-control-sm" placeholder="Link">
+                                                                </div>
+                                                                <div class="col-md-1">
+                                                                    <button type="button" class="btn btn-danger btn-sm remove-social-link w-100">
+                                                                        <i class="ri-delete-bin-line"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" id="add-social-link" class="btn btn-outline-success btn-sm mt-2 w-100">
+                                                        <i class="ri-add-line me-1"></i>Add Platform
+                                                    </button>
+                                                </div>
+
                                             </div>
 
                                             <div class="modal-footer">
@@ -190,6 +222,20 @@
                                                     <label class="col-sm-2 col-form-label"></label>
                                                     <img id="show_banner_edit" class="card-img-top img-fluid my-no-shadow" style="object-fit:cover; width: 370px !important; height:160px !important;" src="{{ asset('no_image.jpg') }}">
                                                 </div>
+
+
+                                                <!-- Social Media Links -->
+                                                <div class="col-12 mt-4">
+                                                    <h5 class="fw-semibold mb-3">Social Media</h5>
+                                                    <div id="social-links-container-edit" class="bg-light p-3 rounded">
+
+                                                    </div>
+                                                    <button type="button" id="add-social-link-edit" class="btn btn-outline-success btn-sm mt-2 w-100">
+                                                        <i class="ri-add-line me-1"></i>Add Platform
+                                                    </button>
+                                                </div>
+
+
                                             </div>
 
                                             <div class="modal-footer">
@@ -277,11 +323,10 @@
 
         function loadEditData(id) {
             $.ajax({
-                url: "{{ route('team-pages.edit') }}", // Route to fetch data
+                url: "{{ route('team-pages.edit') }}",
                 type: "GET",
-                data: { id: id }, // Pass the ID to the backend
+                data: { id: id },
                 success: function(response) {
-                    console.log(response);
 
                     if (response.status === 'success') {
                         // Populate the form fields
@@ -299,6 +344,56 @@
 
                         // Update the form action URL with the correct ID
                         $('#editForm').attr('action', "{{ route('team-pages.update', ['id' => ':id']) }}".replace(':id', id));
+
+                        // Clear existing social links
+                        $('#editForm #social-links-container-edit').empty();
+
+                        // Add social links if they exist
+                        if (response.data.social) {
+
+
+                            socialLinks = response.data.social;
+
+                            // Add each social link to the form
+                            $.each(socialLinks, function(index, social) {
+
+                                console.log(social['name']);
+
+
+                                const container = document.getElementById('social-links-container-edit');
+                                const socialLinkRows = container.querySelectorAll('.social-link-row');
+                                const newIndex = socialLinkRows.length;
+
+                                const newRow = document.createElement('div');
+                                newRow.className = 'social-link-row mb-3 p-2 bg-white rounded shadow-sm';
+                                newRow.innerHTML = `
+                                    <div class="row g-2 align-items-center">
+                                        <div class="col-md-5">
+                                            <select name="social[${newIndex}][name]" class="form-select form-select-sm">
+                                                <option value="Facebook" ${social['name'] === "Facebook" ? "selected" : ""}>Facebook</option>
+                                                <option value="Telegram" ${social['name'] === "Telegram" ? "selected" : ""}>Telegram</option>
+                                                <option value="Twitter" ${social['name'] === "Twitter" ? "selected" : ""}>Twitter</option>
+                                                <option value="LinkedIn" ${social['name'] === "LinkedIn" ? "selected" : ""}>LinkedIn</option>
+                                                <option value="Instagram" ${social['name'] === "Instagram" ? "selected" : ""}>Instagram</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" value="${social['url']}" name="social[${newIndex}][url]" class="form-control form-control-sm" placeholder="Link">
+                                        </div>
+                                        <div class="col-md-1">
+                                            <button type="button" class="btn btn-danger btn-sm remove-social-link w-100">
+                                                <i class="ri-delete-bin-line"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                `;
+                                container.appendChild(newRow);
+                            });
+
+                        } else {
+                            // Add one empty social link row if none exist
+                            document.getElementById('add-social-link-edit').click();
+                        }
                     } else {
                         alert('Failed to load data.');
                     }
@@ -322,6 +417,157 @@
             // Set the ID of the item to be deleted
             $('#deleteBtn').data('id', id); // Store the ID in the button for easy access
         }
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Add new social media link row
+            document.getElementById('add-social-link').addEventListener('click', function() {
+                const container = document.getElementById('social-links-container');
+                const socialLinkRows = container.querySelectorAll('.social-link-row');
+                const newIndex = socialLinkRows.length;
+
+                const newRow = document.createElement('div');
+                newRow.className = 'social-link-row mb-3 p-2 bg-white rounded shadow-sm';
+                newRow.innerHTML = `
+                    <div class="row g-2 align-items-center">
+                        <div class="col-md-5">
+                            <select name="social[${newIndex}][name]" class="form-select form-select-sm">
+                                <option value="" selected>Select a option</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Telegram">Telegram</option>
+                                <option value="Twitter">Twitter</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Instagram">Instagram</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text"
+                                name="social[${newIndex}][url]"
+                                class="form-control form-control-sm"
+                                placeholder="Link">
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button"
+                                    class="btn btn-danger btn-sm remove-social-link w-100">
+                                <i class="ri-delete-bin-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(newRow);
+                attachRemoveListeners();
+            });
+
+            // Function to attach event listeners to remove buttons
+            function attachRemoveListeners() {
+                document.querySelectorAll('.remove-social-link').forEach(button => {
+                    const newButton = button.cloneNode(true);
+                    button.parentNode.replaceChild(newButton, button);
+
+                    newButton.addEventListener('click', function() {
+                        this.closest('.social-link-row').remove();
+                        reindexSocialItems();
+                    });
+                });
+            }
+
+            // Function to reindex social items after removal
+            function reindexSocialItems() {
+                const container = document.getElementById('social-links-container');
+                const socialLinkRows = container.querySelectorAll('.social-link-row');
+
+                socialLinkRows.forEach((row, index) => {
+                    const select = row.querySelector('select[name^="social"][name$="[name]"]');
+                    const urlInput = row.querySelector('input[name^="social"][name$="[url]"]');
+
+                    if (select && urlInput) {
+                        select.name = `social[${index}][name]`;
+                        urlInput.name = `social[${index}][url]`;
+                    }
+                });
+            }
+
+            // Attach listeners on page load
+            attachRemoveListeners();
+
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Add new social media link row
+            document.getElementById('add-social-link-edit').addEventListener('click', function() {
+                const container = document.getElementById('social-links-container-edit');
+                const socialLinkRows = container.querySelectorAll('.social-link-row');
+                const newIndex = socialLinkRows.length;
+
+                const newRow = document.createElement('div');
+                newRow.className = 'social-link-row mb-3 p-2 bg-white rounded shadow-sm';
+                newRow.innerHTML = `
+                    <div class="row g-2 align-items-center">
+                        <div class="col-md-5">
+                            <select name="social[${newIndex}][name]" class="form-select form-select-sm">
+                                <option value="" selected>Select a option</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Telegram">Telegram</option>
+                                <option value="Twitter">Twitter</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Instagram">Instagram</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text"
+                                name="social[${newIndex}][url]"
+                                class="form-control form-control-sm"
+                                placeholder="Link">
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button"
+                                    class="btn btn-danger btn-sm remove-social-link w-100">
+                                <i class="ri-delete-bin-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(newRow);
+                attachRemoveListeners();
+            });
+
+            // Function to attach event listeners to remove buttons
+            function attachRemoveListeners() {
+                document.querySelectorAll('.remove-social-link').forEach(button => {
+                    const newButton = button.cloneNode(true);
+                    button.parentNode.replaceChild(newButton, button);
+
+                    newButton.addEventListener('click', function() {
+                        this.closest('.social-link-row').remove();
+                        reindexSocialItems();
+                    });
+                });
+            }
+
+            // Function to reindex social items after removal
+            function reindexSocialItems() {
+                const container = document.getElementById('social-links-container-edit');
+                const socialLinkRows = container.querySelectorAll('.social-link-row');
+
+                socialLinkRows.forEach((row, index) => {
+                    const select = row.querySelector('select[name^="social"][name$="[name]"]');
+                    const urlInput = row.querySelector('input[name^="social"][name$="[url]"]');
+
+                    if (select && urlInput) {
+                        select.name = `social[${index}][name]`;
+                        urlInput.name = `social[${index}][url]`;
+                    }
+                });
+            }
+
+            // Attach listeners on page load
+            attachRemoveListeners();
+
+        });
 
 
 

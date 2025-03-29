@@ -97,7 +97,7 @@
                                         </div>
                                         <div class="col-md-8">
                                             <p>{{ $data->banner_description }}</p>
-                                            <a href="{{ asset('services') }}" class="more-2">More Details <span class="icon-arrow_forward"></span></a>
+                                            <a href="{{ route('service_details', Str::slug($data->main_title)) }}" class="more-2">More Details <span class="icon-arrow_forward"></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                         </div>
 
                         @php
-                            $number++; // Increment the counter
+                            $number++;
                         @endphp
                     @endforeach
 
@@ -151,10 +151,10 @@
 
 
 
-{{-- include members here  --}}
-@include('frontend.components.members')
+{{-- include testimonial here  --}}
+@include('frontend.components.testimonial')
 
-{{-- include members here  --}}
+{{-- include news here  --}}
 @include('frontend.components.news')
 
 @endsection

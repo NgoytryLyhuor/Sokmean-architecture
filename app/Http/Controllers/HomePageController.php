@@ -81,9 +81,6 @@ class HomePageController extends Controller
         }
     }
 
-
-
-
     public function section_two()
     {
         $data = HomePage::FindOrFail(2);

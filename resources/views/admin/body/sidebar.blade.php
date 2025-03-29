@@ -59,14 +59,14 @@
 
                 <li>
                     <a href="{{ route('testimonial-pages.index') }}" class="waves-effect">
-                        <i class="ri-team-line"></i>
+                        <i class="ri-file-user-line"></i>
                         <span>Testimonial</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-file-text-line"></i>
+                        <i class="ri-book-2-line"></i>
                         <span>Projects</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -77,7 +77,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-file-text-line"></i>
+                        <i class="ri-file-list-3-line"></i>
                         <span>Services</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -88,14 +88,14 @@
 
                 <li>
                     <a href="{{ route('about-pages.index') }}" class="waves-effect">
-                        <i class="ri-team-line"></i>
+                        <i class="ri-search-2-line"></i>
                         <span>About Page</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('contact-us-pages.index') }}" class="waves-effect">
-                        <i class="ri-team-line"></i>
+                        <i class="ri-phone-line"></i>
                         <span>Contact Us Page</span>
                     </a>
                 </li>
