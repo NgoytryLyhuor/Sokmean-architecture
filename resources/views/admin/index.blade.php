@@ -33,25 +33,6 @@
         </div>
 
         <div class="row">
-            <!-- Dashboard -->
-            <div class="col-xl-2 col-md-4">
-                <div class="card hover-animate">
-                    <a href="{{ route('dashboard') }}">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="flex-grow-1 d-flex align-items-center">
-                                    <p class="text-truncate font-size-14 mb-0 text-dark">Dashboard</p>
-                                </div>
-                                <div class="avatar-sm">
-                                    <span class="avatar-title bg-light text-primary rounded-3">
-                                        <i class="text-dark ri-dashboard-line font-size-24"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
 
             <!-- Home Page -->
             <div class="col-xl-2 col-md-4">
